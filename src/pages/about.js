@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 function about() {
   return (
     <div>
+      <title>Frontend Mentor | Coffeeroasters subscription site</title>
+      <Navbar />
+
       Home
   About us
   Create your plan

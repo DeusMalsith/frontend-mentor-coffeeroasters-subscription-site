@@ -1,11 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 
 function plan() {
   return (
     <div>
-        Home
-  About us
-  Create your plan
+    <Navbar />
 
   Create a plan
   Build a subscription plan that best fits your needs. We offer an assortment of the best 
