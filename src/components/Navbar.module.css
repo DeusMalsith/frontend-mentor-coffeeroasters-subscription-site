@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navLinks {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.logo {
+  margin-right: auto;
+}
