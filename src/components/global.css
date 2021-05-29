@@ -1,0 +1,49 @@
+:root {
+  --color-dark-cyan: hsl(179, 81%, 29%);
+  --color-dark-grey-blue: hsl(215, 19%, 25%);
+  --color-pale-orange: hsl(25, 94%, 86%);
+  --color-light-cream-bg: hsl(43, 78%, 98%);
+  --color-grey: hsl(215, 5%, 54%);
+
+  --ff-fraunces: 'Fraunces', serif;
+  --ff-barlow: 'Barlow', sans-serif;
+
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-fraunces);
+}
+
+h1 {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}

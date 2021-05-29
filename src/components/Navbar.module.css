@@ -2,11 +2,28 @@
   display: flex;
   list-style: none;
   align-items: center;
+  font-family: var(--ff-barlow);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
 }
 
-.navLinks {
+.navLinks a {
   margin-left: 2rem;
   margin-right: 2rem;
+  text-decoration: none;
+  color: var(--color-grey);
+}
+
+.navLinks a:visited {
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  cursor: pointer;
+  color: var(--color-dark-grey-blue);
 }
 
 .logo {
