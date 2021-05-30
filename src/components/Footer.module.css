@@ -1,13 +1,9 @@
-.navbar {
+.footer {
   display: flex;
-  list-style: none;
-  align-items: center;
+  flex-direction: row;
+  background-color: var(--color-dark-grey-blue);
   font-family: var(--ff-barlow);
   font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  text-transform: uppercase;
 }
 
 .navLinks a {
@@ -27,5 +23,12 @@
 }
 
 .logo {
+  width: 100%;
   margin-right: auto;
+  fill: white;
+}
+
+.svgFill {
+  fill: white;
+  color: red;
 }

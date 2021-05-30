@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import logo from '../images/shared/desktop/logo.svg';
-import './global.css'
+import './global.css';
 import * as style from '../components/Navbar.module.css';
 
 function Navbar() {

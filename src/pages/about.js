@@ -1,12 +1,10 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Layout from '../components/layout'
 
 function about() {
   return (
     <div>
-      <title>Frontend Mentor | Coffeeroasters subscription site</title>
-      <Navbar />
-
+    <Layout>
       Home
   About us
   Create your plan
@@ -55,7 +53,7 @@ function about() {
   Home
   About us
   Create your plan
-
+  </Layout>
     </div>
   )
 }
