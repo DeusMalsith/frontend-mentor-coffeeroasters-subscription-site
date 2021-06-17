@@ -1,15 +1,17 @@
 import React from 'react'
+import Hero from '../components/hero'
 import Layout from '../components/layout'
 
 function index() {
   return (
   <Layout>
-    Great coffee made simple.
+  <Hero title="Great coffee made simple." paragraph="Start your mornings with the world’s best coffees. Try our expertly curated artisan 
+    coffees from our best roasters delivered directly to your door, at your schedule.">Create your plan</Hero>
+    
 
-    Start your mornings with the world’s best coffees. Try our expertly curated artisan 
-    coffees from our best roasters delivered directly to your door, at your schedule.
+    
 
-    Create your plan
+    
 
     Our collection
 
