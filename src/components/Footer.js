@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import logo from '../images/shared/desktop/logo.svg';
 import facebook from '../images/shared/desktop/icon-facebook.svg';
 import instagram from '../images/shared/desktop/icon-instagram.svg';
 import twitter from '../images/shared/desktop/icon-twitter.svg';
