@@ -1,9 +1,10 @@
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--color-dark-grey-blue);
   font-family: var(--ff-barlow);
   font-weight: 700;
+  list-style: none;
 }
 
 .navLinks a {
@@ -31,4 +32,26 @@
 .svgFill {
   fill: white;
   color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
+
+  .navLinks a {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    color: var(--color-grey);
+  }
+
+  .navLinks a:visited {
+    text-decoration: none;
+  }
+
+  .navLinks a:hover {
+    cursor: pointer;
+    color: var(--color-dark-grey-blue);
+  }
 }

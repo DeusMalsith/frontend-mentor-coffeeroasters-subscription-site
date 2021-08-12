@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-function about() {
+function About() {
   return (
     <div>
     <Layout>
@@ -58,7 +58,7 @@ function about() {
   )
 }
 
-export default about
+export default About
 
 
 

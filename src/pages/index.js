@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 
-function index() {
+function Index() {
   return (
   <Layout>
   <Hero title="Great coffee made simple." paragraph="Start your mornings with the world’s best coffees. Try our expertly curated artisan 
@@ -67,7 +67,7 @@ function index() {
   )
 }
 
-export default index
+export default Index
 
 
 

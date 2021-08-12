@@ -18,10 +18,10 @@ function Footer() {
           <li className={style.navLinks}>
             <Link to='/'>Home</Link>
           </li>
-          <li>
+          <li className={style.navLinks}>
             <Link to='/about'>About us</Link>
           </li>
-          <li>
+          <li className={style.navLinks}>
             <Link to='/plan'>Create your plan</Link>
           </li>
           <li>

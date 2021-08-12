@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-function plan() {
+function Plan() {
   return (
     <div>
     <Layout>    
@@ -113,7 +113,7 @@ function plan() {
   )
 }
 
-export default plan
+export default Plan
 
 
 
