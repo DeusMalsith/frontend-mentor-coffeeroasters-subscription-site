@@ -3,11 +3,10 @@ import React, { useRef, useState } from 'react';
 import Logo from '../images/shared/desktop/logo.svg';
 import iconClose from '../images/shared/mobile/icon-close.svg';
 import iconHamburger from '../images/shared/mobile/icon-hamburger.svg';
-import './global.css';
+
 import * as style from '../components/Navbar.module.css';
 
-function Navbar() {
-  const [openMenu, setOpenMenu] = useState(false);
+function Navbar({setOpenMenu, openMenu}) {
 
   return (
     <header className={style.header}>
