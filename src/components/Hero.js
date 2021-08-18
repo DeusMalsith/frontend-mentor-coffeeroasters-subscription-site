@@ -1,10 +1,11 @@
 import React from 'react'
+import * as style from './Hero.module.css'
 
 function Hero({title, paragraph, children}) {
     return (
-        <div>
-            <h1>{title}</h1>
-            <p>{paragraph}</p>
+        <div className={style.container}>
+            <h2 className={style.heroText}>{title}</h2>
+            <p className={style.pText}>{paragraph}</p>
             <div>{children}</div>
         </div>
     )

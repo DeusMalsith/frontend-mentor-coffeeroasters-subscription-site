@@ -1,9 +1,9 @@
 :root {
-  --color-dark-cyan: hsl(179, 81%, 29%);
-  --color-dark-grey-blue: hsl(215, 19%, 25%);
-  --color-pale-orange: hsl(25, 94%, 86%);
-  --color-light-cream-bg: hsl(45, 80%, 98%);
-  --color-grey: hsl(215, 5%, 54%);
+  --color-dark-cyan: #0e8784;
+  --color-dark-grey-blue: #333d4b;
+  --color-pale-orange: #fdd6ba;
+  --color-light-cream-bg: #fefcf7;
+  --color-grey: #83888f;
 
   --ff-fraunces: 'Fraunces', serif;
   --ff-barlow: 'Barlow', sans-serif;
@@ -51,4 +51,5 @@ body {
   line-height: 2.6rem;
   margin-left: 5.556%;
   margin-right: 5.556%;
+  background-color: var(--color-light-cream-bg);
 }

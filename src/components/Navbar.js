@@ -1,13 +1,11 @@
 import { Link } from 'gatsby';
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import Logo from '../images/shared/desktop/logo.svg';
 import iconClose from '../images/shared/mobile/icon-close.svg';
-import iconHamburger from '../images/shared/mobile/icon-hamburger.svg';
-
+import iconHamburger from '../images/shared/mobile/icon-hamburger.svg'; 
 import * as style from '../components/Navbar.module.css';
 
-function Navbar({setOpenMenu, openMenu}) {
-
+function Navbar({ setOpenMenu, openMenu }) {
   return (
     <header className={style.header}>
       <nav className={style.navbar}>
@@ -28,12 +26,15 @@ function Navbar({setOpenMenu, openMenu}) {
           </li>
           <li className={style.navLink}>
             <Link to='/plan' className={style.navLink}>
-              Create your plan
+              Create Your Plan
             </Link>
           </li>
         </ul>
 
-        <button className={style.hamburgerButton} onClick={() => setOpenMenu(!openMenu)}>
+        <button
+          className={style.hamburgerButton}
+          onClick={() => setOpenMenu(!openMenu)}
+        >
           <img
             src={!openMenu ? iconHamburger : iconClose}
             alt='mobile menu button'

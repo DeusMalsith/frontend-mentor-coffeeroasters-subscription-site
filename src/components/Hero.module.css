@@ -1,0 +1,20 @@
+.container {
+  background-image: url('../images/home/mobile/image-hero-coffeepress.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.heroText {
+}
+
+.pText {
+}
+
+.heroText,
+.pText {
+  color: var(--color-light-cream-bg);
+}
