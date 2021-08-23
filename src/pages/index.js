@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../components/Button'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 
@@ -6,7 +7,7 @@ function Index() {
   return (
   <Layout>
   <Hero title="Great coffee made simple." paragraph="Start your mornings with the world’s best coffees. Try our expertly curated artisan 
-    coffees from our best roasters delivered directly to your door, at your schedule.">Create your plan</Hero>
+    coffees from our best roasters delivered directly to your door, at your schedule."><Button title="Create your plan"/></Hero>
     
 
     

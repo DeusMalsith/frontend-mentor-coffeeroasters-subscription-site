@@ -1,0 +1,22 @@
+.buttonTitle {
+  width: 21.7rem;
+  height: 5.6rem;
+  background-color: var(--color-dark-cyan);
+  color: var(--color-light-cream-bg);
+  font-family: var(--ff-fraunces);
+  font-size: 1.8rem;
+  border-radius: 6px;
+  border-style: none;
+  margin-top: 3.9rem;
+}
+
+.buttonTitle:hover,
+.buttonTitle:active {
+  background-color: #66d2cf;
+  cursor: pointer;
+}
+
+.buttonTitle:disabled {
+  background-color: var(--color-grey);
+  cursor: not-allowed;
+}
