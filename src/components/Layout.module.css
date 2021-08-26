@@ -2,15 +2,46 @@
   overflow: hidden;
 }
 
-.ourCollection {
+.ourCollectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+
+.ourCollectionContainer h4 {
+  margin-bottom: 1.6rem;
+}
+
+.ourCollectionContainer p {
+  width: 31ch;
+  text-align: center;
+}
+
+.ourCollectionContainer img {
+  height: 151px;
+  margin-top: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+.ourCollectionContainer img:first-of-type {
+  margin-top: 1.3rem;
+}
+
+.ourCollectionHeader {
   background-color: #f3ec78;
-  background: linear-gradient(180deg, rgba(131, 136, 143, 0.9) 0%, rgba(131, 136, 143, 0.1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 136, 143, 0.9) 0%,
+    rgba(131, 136, 143, 0.1) 100%
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  text-align: center;
-  margin-top: 12rem;
-  margin-bottom: 1.5rem;
+  line-height: 7.2rem;
+}
+
+.whyChooseUsContainer {
 }

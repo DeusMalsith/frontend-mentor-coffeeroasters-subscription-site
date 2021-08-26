@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import Logo from '../images/shared/desktop/logo.svg';
 import iconClose from '../images/shared/mobile/icon-close.svg';
-import iconHamburger from '../images/shared/mobile/icon-hamburger.svg'; 
+import iconHamburger from '../images/shared/mobile/icon-hamburger.svg';
 import * as style from '../components/Navbar.module.css';
 
 function Navbar({ setOpenMenu, openMenu }) {
