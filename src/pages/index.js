@@ -70,15 +70,33 @@ function Index() {
           guaranteed.
         </p>
       </div>
-      How it works 01 Pick your coffee Select from our evolving range of artisan
-      coffees. Our beans are ethically sourced and we pay fair prices for them.
-      There are new coffees in all profiles every month for you to try out. 02
-      Choose the frequency Customize your order frequency, quantity, even your
-      roast style and grind type. Pause, skip or cancel your subscription with
-      no commitment through our online portal. 03 Receive and enjoy! We ship
-      your package within 48 hours, freshly roasted. Sit back and enjoy
-      award-winning world-class coffees curated to provide a distinct tasting
-      experience. Create your plan
+      <div className={style.howItWorksContainer}>
+        <h4>How it works</h4>
+        <h1>01</h1>
+        <h4>Pick your coffee</h4>
+        <p>
+          Select from our evolving range of artisan coffees. Our beans are
+          ethically sourced and we pay fair prices for them. There are new
+          coffees in all profiles every month for you to try out.
+        </p>
+        <h1>02</h1>
+        <h4>Choose the frequency</h4>
+        <p>
+          Customize your order frequency, quantity, even your roast style and
+          grind type. Pause, skip or cancel your subscription with no commitment
+          through our online portal.
+        </p>
+        <h1>03</h1>
+        <h4>Receive and enjoy!</h4>
+        <p>
+          We ship your package within 48 hours, freshly roasted. Sit back and
+          enjoy award-winning world-class coffees curated to provide a distinct
+          tasting experience.
+        </p>
+        <Link to='/plan'>
+          <Button title='Create your plan' />
+        </Link>
+      </div>
     </Layout>
   );
 }
