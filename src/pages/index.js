@@ -1,9 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import Layout from '../components/layout';
+import OurCollectionCard from '../components/index-page-components/OurCollectionCard';
+import WhyChooseUsCard from '../components/index-page-components/WhyChooseUsCard';
 import Button from '../components/Button';
 import Hero from '../components/hero';
-import Layout from '../components/layout';
-import * as style from '../components/Layout.module.css';
 import GranEspresso from '../images/home/desktop/image-gran-espresso.png';
 import Planalto from '../images/home/desktop/image-planalto.png';
 import Piccollo from '../images/home/desktop/image-piccollo.png';
@@ -11,6 +12,10 @@ import Danche from '../images/home/desktop/image-danche.png';
 import IconCoffeeBean from '../images/home/desktop/icon-coffee-bean.svg';
 import IconGift from '../images/home/desktop/icon-gift.svg';
 import IconTruck from '../images/home/desktop/icon-truck.svg';
+import * as LayoutStyle from '../components/Layout.module.css';
+import * as IndexStyle from '../components/index-page-components/IndexStyle.module.css';
+let style = {};
+Object.assign(style, LayoutStyle, IndexStyle);
 
 function Index() {
   return (
@@ -26,29 +31,33 @@ function Index() {
       </Hero>
       <div className={style.ourCollectionContainer}>
         <h2 className={style.ourCollectionHeader}>our collection</h2>
-        <img src={GranEspresso} alt='Gran Espresso Coffee' />
-        <h4>Gran Espresso</h4>
-        <p>
-          Light and flavorful blend with cocoa and black pepper for an intense
-          experience
-        </p>
-        <img src={Planalto} alt='Planalto Coffee' />
-        <h4>Planalto</h4>
-        <p>
-          Brazilian dark roast with rich and velvety body, and hints of fruits
-          and nuts
-        </p>
-        <img src={Piccollo} alt='Piccollo Coffee' />
-        <h4>Piccollo</h4>
-        <p>
-          Mild and smooth blend featuring notes of toasted almond and dried
-          cherry
-        </p>
-        <img src={Danche} alt='Danche Coffee' />
-        <h4>Danche</h4>
-        <p>
-          Ethiopian hand-harvested blend densely packed with vibrant fruit notes
-        </p>
+        <OurCollectionCard
+          imageSrc={GranEspresso}
+          imageAlt='Gran Espresso Coffee'
+          title='Gran Espresso'
+          paragraph='Light and flavorful blend with cocoa and black pepper for an intense
+          experience'
+        />
+        <OurCollectionCard
+          imageSrc={Planalto}
+          imageAlt='Planalto Coffee'
+          title='Planalto'
+          paragraph='Brazilian dark roast with rich and velvety body, and hints of fruits
+          and nuts'
+        />
+        <OurCollectionCard
+          imageSrc={Piccollo}
+          imageAlt='Piccollo Coffee'
+          title='Piccollo'
+          paragraph='Mild and smooth blend featuring notes of toasted almond and dried
+          cherry'
+        />
+        <OurCollectionCard
+          imageSrc={Danche}
+          imageAlt='Danche Coffee'
+          title='Danche'
+          paragraph='Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
+        />
       </div>
       <div className={style.whyChooseUsContainer}>
         <div className={style.whyChooseUsProposal}>
@@ -60,30 +69,27 @@ function Index() {
             level.
           </p>
         </div>
-        <div className={style.whyChooseUsCard}>
-          <img src={IconCoffeeBean} alt='Coffee Bean Icon' />
-          <h4>Best quality</h4>
-          <p>
-            Discover an endless variety of the world’s best artisan coffee from
-            each of our roasters.
-          </p>
-        </div>
-        <div className={style.whyChooseUsCard}>
-          <img src={IconGift} alt='Gift Icon' />
-          <h4>Exclusive benefits</h4>
-          <p>
-            Special offers and swag when you subscribe, including 30% off your
-            first shipment.
-          </p>
-        </div>
-        <div className={style.whyChooseUsCard}>
-          <img src={IconTruck} alt='Truck Icon' />
-          <h4>Free shipping</h4>
-          <p>
-            We cover the cost and coffee is delivered fast. Peak freshness:
-            guaranteed.
-          </p>
-        </div>
+        <WhyChooseUsCard
+          image={IconCoffeeBean}
+          imageAlt='Coffee Bean Icon'
+          title='Best quality'
+          paragraph='Discover an endless variety of the world’s best artisan coffee from
+            each of our roasters.'
+        />
+        <WhyChooseUsCard
+          image={IconGift}
+          imageAlt='Gift Icon'
+          title='Exclusive benefits'
+          paragraph='Special offers and swag when you subscribe, including 30% off your
+            first shipment.'
+        />
+        <WhyChooseUsCard
+          image={IconTruck}
+          imageAlt='Truck Icon'
+          title='Free Shipping'
+          paragraph='We cover the cost and coffee is delivered fast. Peak freshness:
+            guaranteed.'
+        />
       </div>
       <div className={style.howItWorksContainer}>
         <h4>How it works</h4>

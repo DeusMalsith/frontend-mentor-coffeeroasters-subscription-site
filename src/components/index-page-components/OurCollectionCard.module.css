@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 1.6rem;
+}
+
+.paragraph {
+  width: 31ch;
+  text-align: center;
+}
+
+.image {
+  height: 151px;
+  margin-top: 4.8rem;
+  margin-bottom: 2.4rem;
+}

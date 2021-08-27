@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import './global.css';
 import * as style from './Layout.module.css';
 
 function Layout({ children }) {
