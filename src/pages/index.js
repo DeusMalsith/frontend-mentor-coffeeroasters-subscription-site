@@ -8,6 +8,9 @@ import GranEspresso from '../images/home/desktop/image-gran-espresso.png';
 import Planalto from '../images/home/desktop/image-planalto.png';
 import Piccollo from '../images/home/desktop/image-piccollo.png';
 import Danche from '../images/home/desktop/image-danche.png';
+import IconCoffeeBean from '../images/home/desktop/icon-coffee-bean.svg';
+import IconGift from '../images/home/desktop/icon-gift.svg';
+import IconTruck from '../images/home/desktop/icon-truck.svg';
 
 function Index() {
   return (
@@ -48,27 +51,39 @@ function Index() {
         </p>
       </div>
       <div className={style.whyChooseUsContainer}>
-        <h4>Why choose us?</h4>
-        <p>
-          A large part of our role is choosing which particular coffees will be
-          featured in our range. This means working closely with the best coffee
-          growers to give you a more impactful experience on every level.
-        </p>
-        <h4>Best quality</h4>
-        <p>
-          Discover an endless variety of the world’s best artisan coffee from
-          each of our roasters.
-        </p>
-        <h4>Exclusive benefits</h4>
-        <p>
-          Special offers and swag when you subscribe, including 30% off your
-          first shipment.
-        </p>
-        <h4>Free shipping</h4>
-        <p>
-          We cover the cost and coffee is delivered fast. Peak freshness:
-          guaranteed.
-        </p>
+        <div className={style.whyChooseUsProposal}>
+          <h4>Why choose us?</h4>
+          <p>
+            A large part of our role is choosing which particular coffees will
+            be featured in our range. This means working closely with the best
+            coffee growers to give you a more impactful experience on every
+            level.
+          </p>
+        </div>
+        <div className={style.whyChooseUsCard}>
+          <img src={IconCoffeeBean} alt='Coffee Bean Icon' />
+          <h4>Best quality</h4>
+          <p>
+            Discover an endless variety of the world’s best artisan coffee from
+            each of our roasters.
+          </p>
+        </div>
+        <div className={style.whyChooseUsCard}>
+          <img src={IconGift} alt='Gift Icon' />
+          <h4>Exclusive benefits</h4>
+          <p>
+            Special offers and swag when you subscribe, including 30% off your
+            first shipment.
+          </p>
+        </div>
+        <div className={style.whyChooseUsCard}>
+          <img src={IconTruck} alt='Truck Icon' />
+          <h4>Free shipping</h4>
+          <p>
+            We cover the cost and coffee is delivered fast. Peak freshness:
+            guaranteed.
+          </p>
+        </div>
       </div>
       <div className={style.howItWorksContainer}>
         <h4>How it works</h4>

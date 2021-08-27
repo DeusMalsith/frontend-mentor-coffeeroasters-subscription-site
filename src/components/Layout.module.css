@@ -44,8 +44,69 @@
 }
 
 .whyChooseUsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12rem;
+  color: var(--color-light-cream-bg);
+}
+
+.whyChooseUsContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 60%;
+  background-color: var(--color-darker-grey-blue);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.whyChooseUsProposal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.whyChooseUsProposal p {
+  width: 33ch;
+}
+
+.whyChooseUsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 38.2rem;
+  background-color: var(--color-dark-cyan);
+  border-radius: 8px;
+  margin-bottom: 2.4rem;
+}
+
+.whyChooseUsCard p {
+  width: 23ch;
+  margin-top: 2.4rem;
+}
+
+.whyChooseUsCard img {
+  margin-top: 7.2rem;
+  margin-bottom: 5.6rem;
+}
+
+.whyChooseUsCard,
+.whyChooseUsProposal {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.whyChooseUsCard:last-of-type {
+  margin-bottom: 0;
 }
 
 .howItWorksContainer {
-  
 }
