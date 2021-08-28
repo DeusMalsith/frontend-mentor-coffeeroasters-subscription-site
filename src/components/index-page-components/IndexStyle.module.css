@@ -25,6 +25,12 @@
   line-height: 7.2rem;
 }
 
+@media screen and (max-width: 320px) {
+  .ourCollectionHeader {
+    font-size: 3rem;
+  }
+}
+
 .whyChooseUsContainer {
   position: relative;
   display: flex;
@@ -57,7 +63,7 @@
 }
 
 .whyChooseUsProposal p {
-  width: 33ch;
+  max-width: 33ch;
 }
 
 .howItWorksContainer {
@@ -73,5 +79,5 @@
 }
 
 .howItWorksContainer div:last-of-type p {
-  width: 37ch;
+  max-width: 37ch;
 }
