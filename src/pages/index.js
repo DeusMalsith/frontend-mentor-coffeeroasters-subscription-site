@@ -1,10 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
+import Hero from '../components/hero';
+import Button from '../components/Button';
 import OurCollectionCard from '../components/index-page-components/OurCollectionCard';
 import WhyChooseUsCard from '../components/index-page-components/WhyChooseUsCard';
-import Button from '../components/Button';
-import Hero from '../components/hero';
+import HowItWorksCard from '../components/index-page-components/HowItWorksCard';
 import GranEspresso from '../images/home/desktop/image-gran-espresso.png';
 import Planalto from '../images/home/desktop/image-planalto.png';
 import Piccollo from '../images/home/desktop/image-piccollo.png';
@@ -93,27 +94,27 @@ function Index() {
       </div>
       <div className={style.howItWorksContainer}>
         <h4>How it works</h4>
-        <h1>01</h1>
-        <h4>Pick your coffee</h4>
-        <p>
-          Select from our evolving range of artisan coffees. Our beans are
+        <HowItWorksCard
+          number='01'
+          title='Pick your coffee'
+          paragraph='Select from our evolving range of artisan coffees. Our beans are
           ethically sourced and we pay fair prices for them. There are new
-          coffees in all profiles every month for you to try out.
-        </p>
-        <h1>02</h1>
-        <h4>Choose the frequency</h4>
-        <p>
-          Customize your order frequency, quantity, even your roast style and
+          coffees in all profiles every month for you to try out.'
+        />
+        <HowItWorksCard
+          number='02'
+          title='Choose the frequency'
+          paragraph='Customize your order frequency, quantity, even your roast style and
           grind type. Pause, skip or cancel your subscription with no commitment
-          through our online portal.
-        </p>
-        <h1>03</h1>
-        <h4>Receive and enjoy!</h4>
-        <p>
-          We ship your package within 48 hours, freshly roasted. Sit back and
+          through our online portal.'
+        />
+        <HowItWorksCard
+          number='03'
+          title='Receive and enjoy!'
+          paragraph='We ship your package within 48 hours, freshly roasted. Sit back and
           enjoy award-winning world-class coffees curated to provide a distinct
-          tasting experience.
-        </p>
+          tasting experience.'
+        />
         <Link to='/plan'>
           <Button title='Create your plan' />
         </Link>

@@ -6,6 +6,10 @@
   margin-bottom: 12rem;
 }
 
+.ourCollectionContainer div:first-of-type img {
+  margin-top: 1.3rem;
+}
+
 .ourCollectionHeader {
   background-color: #f3ec78;
   background: linear-gradient(
@@ -57,4 +61,17 @@
 }
 
 .howItWorksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 111.6rem;
+  justify-content: space-between;
+}
+
+.howItWorksContainer > h4 {
+  color: var(--color-grey);
+}
+
+.howItWorksContainer div:last-of-type p {
+  width: 37ch;
 }

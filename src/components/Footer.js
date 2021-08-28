@@ -12,8 +12,7 @@ function Footer() {
       <nav>
         <ul className={style.footer}>
           <li className={style.logo}>
-            {/* <img className={style.svgFill} src={logo} alt='coffeeroasters logo' /> */}
-            <FooterLogo color="#FFF" />
+            <FooterLogo color='#FFF' />
           </li>
           <li className={style.navLinks}>
             <Link to='/'>Home</Link>
