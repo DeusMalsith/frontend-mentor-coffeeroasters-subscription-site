@@ -1,33 +1,21 @@
-.footer {
+.container {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-darker-grey-blue);
-  font-family: var(--ff-barlow);
-  font-weight: 700;
-  list-style: none;
+  align-items: center;
   margin-top: 12rem;
+  margin-bottom: 7.2rem;
+  background-color: var(--color-darker-grey-blue);
 }
 
-.navLinks a {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  text-decoration: none;
-  color: var(--color-grey);
-}
-
-.navLinks a:visited {
-  text-decoration: none;
-}
-
-.navLinks a:hover {
-  cursor: pointer;
-  color: var(--color-dark-grey-blue);
+.subContainer {
+  margin: 5.4rem 5.5rem;
 }
 
 .logo {
   width: 100%;
   margin-right: auto;
   fill: white;
+  list-style: none;
 }
 
 .svgFill {
@@ -35,23 +23,65 @@
   color: red;
 }
 
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ff-barlow);
+  font-weight: bold;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  height: 9.3rem;
+  margin-top: 4.84rem;
+  margin-bottom: 4.85rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--color-grey);
+}
+
+.link a:visited {
+  text-decoration: none;
+  color: var(--color-grey);
+}
+
+.link a:hover {
+  cursor: pointer;
+  color: var(--color-dark-grey-blue);
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 5.8rem;
+  padding-right: 5.8rem;
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     flex-direction: row;
   }
 
-  .navLinks a {
+  .link a {
     margin-left: 2rem;
     margin-right: 2rem;
     text-decoration: none;
     color: var(--color-grey);
   }
 
-  .navLinks a:visited {
+  .link a:visited {
     text-decoration: none;
   }
 
-  .navLinks a:hover {
+  .link a:hover {
     cursor: pointer;
     color: var(--color-dark-grey-blue);
   }

@@ -8,21 +8,23 @@ import FooterLogo from './footerlogo';
 
 function Footer() {
   return (
-    <div>
-      <nav>
-        <ul className={style.footer}>
-          <li className={style.logo}>
-            <FooterLogo color='#FFF' />
-          </li>
-          <li className={style.navLinks}>
+    <nav className={style.container}>
+      <ul className={style.subContainer}>
+        <li className={style.logo}>
+          <FooterLogo color='#FFF' />
+        </li>
+        <ul className={style.navLinks}>
+          <li className={style.link}>
             <Link to='/'>Home</Link>
           </li>
-          <li className={style.navLinks}>
+          <li className={style.link}>
             <Link to='/about'>About us</Link>
           </li>
-          <li className={style.navLinks}>
+          <li className={style.link}>
             <Link to='/plan'>Create your plan</Link>
           </li>
+        </ul>
+        <ul className={style.socialMedia}>
           <li>
             <img src={facebook} alt='facebook icon' />
           </li>
@@ -33,8 +35,8 @@ function Footer() {
             <img src={instagram} alt='instagram icon' />
           </li>
         </ul>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   );
 }
 
