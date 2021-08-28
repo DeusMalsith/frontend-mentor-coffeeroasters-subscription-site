@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import OurCollectionCard from '../components/index-page-components/OurCollectionCard';
 import WhyChooseUsCard from '../components/index-page-components/WhyChooseUsCard';
 import HowItWorksCard from '../components/index-page-components/HowItWorksCard';
+import CoffeeBackground from '../images/home/mobile/image-hero-coffeepress.jpg';
 import GranEspresso from '../images/home/desktop/image-gran-espresso.png';
 import Planalto from '../images/home/desktop/image-planalto.png';
 import Piccollo from '../images/home/desktop/image-piccollo.png';
@@ -22,6 +23,7 @@ function Index() {
   return (
     <Layout>
       <Hero
+        background={CoffeeBackground}
         title='Great coffee made simple.'
         paragraph='Start your mornings with the world’s best coffees. Try our expertly curated artisan 
       coffees from our best roasters delivered directly to your door, at your schedule.'
