@@ -25,6 +25,7 @@
   font-size: 1.5rem;
   max-width: 36ch;
   padding-bottom: 3.9rem;
+  opacity: 0.8;
 }
 
 .aboutContainer {
@@ -54,6 +55,7 @@
   font-size: 1.5rem;
   max-width: 33ch;
   padding-bottom: 3.9rem;
+  opacity: 0.8;
 }
 
 .planContainer {
@@ -83,4 +85,5 @@
   font-size: 1.5rem;
   max-width: 36ch;
   padding-bottom: 3.9rem;
+  opacity: 0.8;
 }
