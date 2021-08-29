@@ -1,4 +1,4 @@
-.container {
+.homeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,9 +7,11 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url('../images/home/mobile/image-hero-coffeepress.jpg');
+  color: var(--color-light-cream-bg);
 }
 
-.heroText {
+.homeTitle {
   text-align: center;
   font-size: 4rem;
   line-height: 4rem;
@@ -18,14 +20,67 @@
   padding-bottom: 2.5rem;
 }
 
-.pText {
+.homeParagraph {
   text-align: center;
   font-size: 1.5rem;
-  width: 36ch;
+  max-width: 36ch;
   padding-bottom: 3.9rem;
 }
 
-.heroText,
-.pText {
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/about/mobile/image-hero-whitecup.jpg');
   color: var(--color-light-cream-bg);
+}
+
+.aboutTitle {
+  text-align: center;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  max-width: 28rem;
+  padding-top: 10rem;
+  padding-bottom: 2.5rem;
+}
+
+.aboutParagraph {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 33ch;
+  padding-bottom: 3.9rem;
+}
+
+.planContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/plan/mobile/image-hero-blackcup.jpg');
+  color: var(--color-light-cream-bg);
+}
+
+.planTitle {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  max-width: 28rem;
+  padding-top: 10rem;
+  padding-bottom: 2.5rem;
+}
+
+.planParagraph {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 36ch;
+  padding-bottom: 3.9rem;
 }

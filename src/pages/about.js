@@ -1,18 +1,20 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React from 'react';
+import Layout from '../components/layout';
+import Hero from '../components/Hero';
+import * as style from '../components/about-page-components/AboutStyle.module.css';
 
 function About() {
   return (
     <div>
     <Layout>
-      Home
-  About us
-  Create your plan
-
-  About us
-  Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of 
-  coffee from around the world. We have since been dedicated to bring the perfect cup - from 
-  bean to brew - in every shipment.
+    <Hero
+      pageName='about'
+      title='About us' 
+      paragraph='Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of 
+        coffee from around the world. We have since been dedicated to bring the perfect cup - from 
+        bean to brew - in every shipment.'
+    />
+  
   
   Our commitment
   We’re built on a simple mission and a commitment to doing good along the way. We want to 
