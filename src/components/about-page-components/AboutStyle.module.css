@@ -64,3 +64,9 @@
   max-width: 33ch;
   opacity: 0.8;
 }
+
+.ourHeadquartersTitle {
+  color: var(--color-grey);
+  text-align: center;
+  margin-bottom: 7.2rem;
+}

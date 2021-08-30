@@ -1,8 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/Hero';
+import OurHeadquartersCard from '../components/about-page-components/OurHeadquartersCard';
 import OurCommitmentImage from '../images/about/mobile/image-commitment.jpg';
 import QualityImage from '../images/about/mobile/image-quality.jpg';
+import UnitedKingdomIcon from '../images/about/desktop/illustration-uk.svg';
+import CanadaIcon from '../images/about/desktop/illustration-canada.svg';
+import AustraliaIcon from '../images/about/desktop/illustration-australia.svg';
 import * as style from '../components/about-page-components/AboutStyle.module.css';
 
 function About() {
@@ -52,15 +56,34 @@ function About() {
           and enjoyable.
         </p>
       </div>
-      <div>
-        Our headquarters United Kingdom 68 Asfordby Rd Alcaston SY6 1YA +44 1241
-      </div>
-      <div>
-        918425 Canada 1528 Eglinton Avenue Toronto Ontario M4P 1A6 +1 416 485
-      </div>
-      <div>
-        2997 Australia 36 Swanston Street Kewell Victoria +61 4 9928 3629
-      </div>
+      <h4 className={style.ourHeadquartersTitle}>Our headquarters</h4>
+      <OurHeadquartersCard
+        image={UnitedKingdomIcon}
+        imageAlt='United Kingdom Icon'
+        title='United Kingdom'
+        address='68  Asfordby Rd'
+        city='Alcaston'
+        state='SY6 1YA'
+        number='+44 1241 918425'
+      />
+      <OurHeadquartersCard
+        image={CanadaIcon}
+        imageAlt='Canada Icon'
+        title='Canada'
+        address='1528  Eglinton Avenue'
+        city='Toronto'
+        state='Ontario M4P 1A6'
+        number='+1 416 485 2997'
+      />
+      <OurHeadquartersCard
+        image={AustraliaIcon}
+        imageAlt='Australia Icon'
+        title='Australia'
+        address='36 Swanston Street'
+        city='Kewell'
+        state='Victoria'
+        number='+61 4 9928 3629'
+      />
     </Layout>
   );
 }
