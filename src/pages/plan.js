@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Hero from '../components/Hero.js'
 import * as style from '../components/plan-page-components/PlanStyle.module.css'
 import PlanStepsCard from '../components/plan-page-components/PlanStepsCard'
+import PlanQuestionCard from '../components/plan-page-components/PlanQuestionCard'
 
 function Plan() {
   return (
@@ -12,72 +13,32 @@ function Plan() {
   artisan coffees from around the globe delivered fresh to your door.' />
 
   <div className={style.planStepsContainer}>
-  <PlanStepsCard number='01' title='Pick your coffee' paragraph={`Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.`}/>
+  <PlanStepsCard number='01' title='Pick your coffee' paragraph='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'/>
   <PlanStepsCard number='02' title='Choose the frequency' paragraph='Customize your order frequency, quantity, even your roast style and grind type.
     Pause, skip or cancel your subscription with no commitment through our online portal.'/>
   <PlanStepsCard number='03' title='Receive and enjoy!' paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
     world-class coffees curated to provide a distinct tasting experience.'/>
   </div>
 
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
 
-  How do you drink your coffee?
 
-  Capsule
-  Compatible with Nespresso systems and similar brewers
+  <div>
+    {/* 01 Preferences
+    02 Bean type
+    03 Quantity
+    04 Grind option
+    05 Deliveries */}
 
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
+    <PlanQuestionCard question='How do you drink your coffee?' answer1='  Capsule' paragraph1='Compatible with Nespresso systems and similar brewers' answer2='Filter' paragraph2='  For pour over or drip methods like Aeropress, Chemex, and V60' answer3='Espresso' paragraph3='  Dense and finely ground beans for an intense, flavorful experience'/>
+  <PlanQuestionCard question='  What type of coffee?' answer1='  Single origin' paragraph1='Distinct, high quality coffee from a specific family-owned farm' answer2='Decaf' paragraph2='Just like regular coffee, except the caffeine has been removed' answer3='Blended' paragraph3='Combination of two or three dark roasted beans of organic coffees'/>
+  <PlanQuestionCard question='How much would you like?' answer1='250g' paragraph1='Perfect for the solo drinker. Yields about 12 delicious cups.' answer2='500g' paragraph2='Perfect option for a couple. Yields about 40 delectable cups.' answer3='1000g' paragraph3='Perfect for offices and events. Yields about 90 delightful cups.'/>
+  <PlanQuestionCard question='Want us to grind them?' answer1='Wholebean' paragraph1='Best choice if you cherish the full sensory experience' answer2='Filter' paragraph2='For drip or pour-over coffee methods such as V60 or Aeropress' answer3='Cafetiére' paragraph3='Course ground beans specially suited for french press coffee'/>
+  <PlanQuestionCard question='How often should we deliver?' answer1='Every week' paragraph1='$14.00 per shipment. Includes free first-class shipping.' answer2='Every 2 weeks' paragraph2='$17.25 per shipment. Includes free priority shipping.' answer3='Every month' paragraph3='$22.50 per shipment. Includes free priority shipping.'/>
 
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
 
-  What type of coffee?
+  </div>
 
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
 
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
 
   Order Summary
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
@@ -99,9 +60,6 @@ function Plan() {
   Checkout
   {/* <!-- End modal --> */}
 
-  Home
-  About us
-  Create your plan
   </Layout>
     </div>
   )

@@ -5,8 +5,11 @@
   justify-content: space-evenly;
   margin-top: 12rem;
   height: 102.8rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
   background-color: var(--color-darker-grey-blue);
   background-image: url(../../images/plan/mobile/bg-steps.png);
+  background-size: cover;
   border-radius: 10px;
 }
 

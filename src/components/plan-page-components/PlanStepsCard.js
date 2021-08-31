@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from './planStepsCard.module.css';
+import * as style from './PlanStepsCard.module.css';
 
 function PlanStepsCard({ number, title, paragraph }) {
   return (
