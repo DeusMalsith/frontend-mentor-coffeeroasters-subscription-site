@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--color-darker-grey-blue);
   background-image: url('../images/home/mobile/image-hero-coffeepress.jpg');
   color: var(--color-light-cream-bg);
 }
@@ -37,6 +38,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--color-darker-grey-blue);
   background-image: url('../images/about/mobile/image-hero-whitecup.jpg');
   color: var(--color-light-cream-bg);
 }
@@ -67,6 +69,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: var(--color-darker-grey-blue);
   background-image: url('../images/plan/mobile/image-hero-blackcup.jpg');
   color: var(--color-light-cream-bg);
 }

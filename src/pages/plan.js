@@ -1,29 +1,23 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Hero from '../components/Hero.js'
+import * as style from '../components/plan-page-components/PlanStyle.module.css'
+import PlanStepsCard from '../components/plan-page-components/PlanStepsCard'
 
 function Plan() {
   return (
     <div>
-    <Layout>    
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
+    <Layout>
+    <Hero pageName='plan' title='Create a plan' paragraph='Build a subscription plan that best fits your needs. We offer an assortment of the best 
+  artisan coffees from around the globe delivered fresh to your door.' />
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
-  
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
+  <div className={style.planStepsContainer}>
+  <PlanStepsCard number='01' title='Pick your coffee' paragraph={`Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.`}/>
+  <PlanStepsCard number='02' title='Choose the frequency' paragraph='Customize your order frequency, quantity, even your roast style and grind type.
+    Pause, skip or cancel your subscription with no commitment through our online portal.'/>
+  <PlanStepsCard number='03' title='Receive and enjoy!' paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+    world-class coffees curated to provide a distinct tasting experience.'/>
+  </div>
 
   01 Preferences
   02 Bean type

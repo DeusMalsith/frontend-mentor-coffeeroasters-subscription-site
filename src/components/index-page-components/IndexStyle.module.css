@@ -50,6 +50,7 @@
   bottom: 0;
   height: 60%;
   background-color: var(--color-darker-grey-blue);
+  background-image: url(../../images/about/mobile/bg-quality.png);
   z-index: -1;
   border-radius: 10px;
 }

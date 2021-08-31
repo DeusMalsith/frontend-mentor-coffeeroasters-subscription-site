@@ -1,0 +1,15 @@
+.planStepsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 12rem;
+  height: 102.8rem;
+  background-color: var(--color-darker-grey-blue);
+  background-image: url(../../images/plan/mobile/bg-steps.png);
+  border-radius: 10px;
+}
+
+.planStepsContainer div:last-of-type > p {
+  max-width: 37ch;
+}

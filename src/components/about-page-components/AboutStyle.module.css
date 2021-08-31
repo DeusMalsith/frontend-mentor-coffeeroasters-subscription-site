@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-darker-grey-blue);
+  background-image: url(../../images/about/mobile/bg-quality.png);
   border-radius: 10px;
   height: 50.9rem;
   margin-bottom: 12rem;
