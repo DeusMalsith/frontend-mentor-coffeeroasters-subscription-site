@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as style from './PlanQuestionCard.module.css';
 
 function PlanQuestionCard({
@@ -10,9 +10,9 @@ function PlanQuestionCard({
   paragraph2,
   answer3,
   paragraph3,
+  setAnswer,
+  answer,
 }) {
-  const [radioValue, setRadioValue] = useState(null);
-
   return (
     <details className={style.container}>
       <summary className={style.question}>
@@ -22,7 +22,7 @@ function PlanQuestionCard({
       <label className={style.answer}>
         <div
           className={
-            radioValue === answer1
+            answer === answer1
               ? `${style.answerContainer} ${style.active}`
               : style.answerContainer
           }
@@ -34,7 +34,7 @@ function PlanQuestionCard({
             id='answer1'
             value={answer1}
             onChange={(e) => {
-              setRadioValue(e.target.value);
+              setAnswer(e.target.value);
             }}
           />
           <p className={style.answerParagraph}>{paragraph1}</p>
@@ -44,7 +44,7 @@ function PlanQuestionCard({
       <label className={style.answer}>
         <div
           className={
-            radioValue === answer2
+            answer === answer2
               ? `${style.answerContainer} ${style.active}`
               : style.answerContainer
           }
@@ -56,7 +56,7 @@ function PlanQuestionCard({
             id='answer2'
             value={answer2}
             onChange={(e) => {
-              setRadioValue(e.target.value);
+              setAnswer(e.target.value);
             }}
           />
           <p className={style.answerParagraph}>{paragraph2}</p>
@@ -66,7 +66,7 @@ function PlanQuestionCard({
       <label className={style.answer}>
         <div
           className={
-            radioValue === answer3
+            answer === answer3
               ? `${style.answerContainer} ${style.active}`
               : style.answerContainer
           }
@@ -78,7 +78,7 @@ function PlanQuestionCard({
             id='answer3'
             value={answer3}
             onChange={(e) => {
-              setRadioValue(e.target.value);
+              setAnswer(e.target.value);
             }}
           />
           <p className={style.answerParagraph}>{paragraph3}</p>

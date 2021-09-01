@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/Hero.js';
 import * as style from '../components/plan-page-components/PlanStyle.module.css';
@@ -6,6 +6,12 @@ import PlanStepsCard from '../components/plan-page-components/PlanStepsCard';
 import PlanQuestionCard from '../components/plan-page-components/PlanQuestionCard';
 
 function Plan() {
+  const [answer1, setAnswer1] = useState(null);
+  const [answer2, setAnswer2] = useState(null);
+  const [answer3, setAnswer3] = useState(null);
+  const [answer4, setAnswer4] = useState(null);
+  const [answer5, setAnswer5] = useState(null);
+
   return (
     <div>
       <Layout>
@@ -55,6 +61,8 @@ function Plan() {
               paragraph2='For pour over or drip methods like Aeropress, Chemex, and V60'
               answer3='Espresso'
               paragraph3='Dense and finely ground beans for an intense, flavorful experience'
+              setAnswer={setAnswer1}
+              answer={answer1}
             />
 
             <PlanQuestionCard
@@ -66,6 +74,8 @@ function Plan() {
               paragraph2='Just like regular coffee, except the caffeine has been removed'
               answer3='Blended'
               paragraph3='Combination of two or three dark roasted beans of organic coffees'
+              setAnswer={setAnswer2}
+              answer={answer2}
             />
 
             <PlanQuestionCard
@@ -77,6 +87,8 @@ function Plan() {
               paragraph2='Perfect option for a couple. Yields about 40 delectable cups.'
               answer3='1000g'
               paragraph3='Perfect for offices and events. Yields about 90 delightful cups.'
+              setAnswer={setAnswer3}
+              answer={answer3}
             />
 
             <PlanQuestionCard
@@ -88,6 +100,8 @@ function Plan() {
               paragraph2='For drip or pour-over coffee methods such as V60 or Aeropress'
               answer3='Cafetiére'
               paragraph3='Course ground beans specially suited for french press coffee'
+              setAnswer={setAnswer4}
+              answer={answer4}
             />
 
             <PlanQuestionCard
@@ -99,6 +113,8 @@ function Plan() {
               paragraph2='$17.25 per shipment. Includes free priority shipping.'
               answer3='Every month'
               paragraph3='$22.50 per shipment. Includes free priority shipping.'
+              setAnswer={setAnswer5}
+              answer={answer5}
             />
 
             <div>
