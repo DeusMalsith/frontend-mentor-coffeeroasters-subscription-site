@@ -1,71 +1,126 @@
-import React from 'react'
-import Layout from '../components/layout'
-import Hero from '../components/Hero.js'
-import * as style from '../components/plan-page-components/PlanStyle.module.css'
-import PlanStepsCard from '../components/plan-page-components/PlanStepsCard'
-import PlanQuestionCard from '../components/plan-page-components/PlanQuestionCard'
+import React from 'react';
+import Layout from '../components/layout';
+import Hero from '../components/Hero.js';
+import * as style from '../components/plan-page-components/PlanStyle.module.css';
+import PlanStepsCard from '../components/plan-page-components/PlanStepsCard';
+import PlanQuestionCard from '../components/plan-page-components/PlanQuestionCard';
 
 function Plan() {
   return (
     <div>
-    <Layout>
-    <Hero pageName='plan' title='Create a plan' paragraph='Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.' />
+      <Layout>
+        <Hero
+          pageName='plan'
+          title='Create a plan'
+          paragraph='Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.'
+        />
 
-  <div className={style.planStepsContainer}>
-  <PlanStepsCard number='01' title='Pick your coffee' paragraph='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'/>
-  <PlanStepsCard number='02' title='Choose the frequency' paragraph='Customize your order frequency, quantity, even your roast style and grind type.
-    Pause, skip or cancel your subscription with no commitment through our online portal.'/>
-  <PlanStepsCard number='03' title='Receive and enjoy!' paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-    world-class coffees curated to provide a distinct tasting experience.'/>
-  </div>
+        <div className={style.planStepsContainer}>
+          <PlanStepsCard
+            number='01'
+            title='Pick your coffee'
+            paragraph='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'
+          />
+          <PlanStepsCard
+            number='02'
+            title='Choose the frequency'
+            paragraph='Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.'
+          />
+          <PlanStepsCard
+            number='03'
+            title='Receive and enjoy!'
+            paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.'
+          />
+        </div>
 
+        <div>
+          {/* 01 Preferences
+          02 Bean type
+          03 Quantity
+          04 Grind option
+          05 Deliveries */}
 
+          <form
+            action=''
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <PlanQuestionCard
+              formName='question1'
+              question='How do you drink your coffee?'
+              answer1='Capsule'
+              paragraph1='Compatible with Nespresso systems and similar brewers'
+              answer2='Filter'
+              paragraph2='For pour over or drip methods like Aeropress, Chemex, and V60'
+              answer3='Espresso'
+              paragraph3='Dense and finely ground beans for an intense, flavorful experience'
+            />
 
-  <div>
-    {/* 01 Preferences
-    02 Bean type
-    03 Quantity
-    04 Grind option
-    05 Deliveries */}
+            <PlanQuestionCard
+              formName='question2'
+              question='What type of coffee?'
+              answer1='Single origin'
+              paragraph1='Distinct, high quality coffee from a specific family-owned farm'
+              answer2='Decaf'
+              paragraph2='Just like regular coffee, except the caffeine has been removed'
+              answer3='Blended'
+              paragraph3='Combination of two or three dark roasted beans of organic coffees'
+            />
 
-    <PlanQuestionCard question='How do you drink your coffee?' answer1='  Capsule' paragraph1='Compatible with Nespresso systems and similar brewers' answer2='Filter' paragraph2='  For pour over or drip methods like Aeropress, Chemex, and V60' answer3='Espresso' paragraph3='  Dense and finely ground beans for an intense, flavorful experience'/>
-  <PlanQuestionCard question='  What type of coffee?' answer1='  Single origin' paragraph1='Distinct, high quality coffee from a specific family-owned farm' answer2='Decaf' paragraph2='Just like regular coffee, except the caffeine has been removed' answer3='Blended' paragraph3='Combination of two or three dark roasted beans of organic coffees'/>
-  <PlanQuestionCard question='How much would you like?' answer1='250g' paragraph1='Perfect for the solo drinker. Yields about 12 delicious cups.' answer2='500g' paragraph2='Perfect option for a couple. Yields about 40 delectable cups.' answer3='1000g' paragraph3='Perfect for offices and events. Yields about 90 delightful cups.'/>
-  <PlanQuestionCard question='Want us to grind them?' answer1='Wholebean' paragraph1='Best choice if you cherish the full sensory experience' answer2='Filter' paragraph2='For drip or pour-over coffee methods such as V60 or Aeropress' answer3='Cafetiére' paragraph3='Course ground beans specially suited for french press coffee'/>
-  <PlanQuestionCard question='How often should we deliver?' answer1='Every week' paragraph1='$14.00 per shipment. Includes free first-class shipping.' answer2='Every 2 weeks' paragraph2='$17.25 per shipment. Includes free priority shipping.' answer3='Every month' paragraph3='$22.50 per shipment. Includes free priority shipping.'/>
+            <PlanQuestionCard
+              formName='question3'
+              question='How much would you like?'
+              answer1='250g'
+              paragraph1='Perfect for the solo drinker. Yields about 12 delicious cups.'
+              answer2='500g'
+              paragraph2='Perfect option for a couple. Yields about 40 delectable cups.'
+              answer3='1000g'
+              paragraph3='Perfect for offices and events. Yields about 90 delightful cups.'
+            />
 
+            <PlanQuestionCard
+              formName='question4'
+              question='Want us to grind them?'
+              answer1='Wholebean'
+              paragraph1='Best choice if you cherish the full sensory experience'
+              answer2='Filter'
+              paragraph2='For drip or pour-over coffee methods such as V60 or Aeropress'
+              answer3='Cafetiére'
+              paragraph3='Course ground beans specially suited for french press coffee'
+            />
 
-  </div>
+            <PlanQuestionCard
+              formName='question5'
+              question='How often should we deliver?'
+              answer1='Every week'
+              paragraph1='$14.00 per shipment. Includes free first-class shipping.'
+              answer2='Every 2 weeks'
+              paragraph2='$17.25 per shipment. Includes free priority shipping.'
+              answer3='Every month'
+              paragraph3='$22.50 per shipment. Includes free priority shipping.'
+            />
 
+            <div>
+              Order Summary “I drink coffee _____, with a _____ type of bean.
+              _____ ground ala _____, sent to me _____.” Create my plan!
+            </div>
 
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
-
-  {/* <!-- Modal --> */}
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
-  {/* <!-- End modal --> */}
-
-  </Layout>
+            {/* <!-- Modal --> */}
+            <div>
+              Order Summary “I drink coffee _____, with a _____ type of bean.
+              _____ ground ala _____, sent to me _____.” Is this correct? You
+              can proceed to checkout or go back to plan selection if something
+              is off. Subscription discount codes can also be redeemed at the
+              checkout. $_____/month
+              <button>Checkout</button>
+            </div>
+            {/* <!-- End modal --> */}
+          </form>
+        </div>
+      </Layout>
     </div>
-  )
+  );
 }
 
-export default Plan
-
-
-
+export default Plan;
