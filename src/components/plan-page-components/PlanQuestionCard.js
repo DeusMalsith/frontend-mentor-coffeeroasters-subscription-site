@@ -33,8 +33,8 @@ function PlanQuestionCard({
             name={formName}
             id='answer1'
             value={answer1}
-            onChange={(e) => {
-              setAnswer(e.target.value);
+            onClick={(e) => {
+              setAnswer(answer !== answer1 ? e.target.value : null);
             }}
           />
           <p className={style.answerParagraph}>{paragraph1}</p>
@@ -55,8 +55,8 @@ function PlanQuestionCard({
             name={formName}
             id='answer2'
             value={answer2}
-            onChange={(e) => {
-              setAnswer(e.target.value);
+            onClick={(e) => {
+              setAnswer(answer !== answer2 ? e.target.value : null);
             }}
           />
           <p className={style.answerParagraph}>{paragraph2}</p>
@@ -77,8 +77,8 @@ function PlanQuestionCard({
             name={formName}
             id='answer3'
             value={answer3}
-            onChange={(e) => {
-              setAnswer(e.target.value);
+            onClick={(e) => {
+              setAnswer(answer !== answer3 ? e.target.value : null);
             }}
           />
           <p className={style.answerParagraph}>{paragraph3}</p>

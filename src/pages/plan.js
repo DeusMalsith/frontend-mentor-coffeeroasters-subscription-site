@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/Hero.js';
+import Button from '../components/Button.js';
 import * as style from '../components/plan-page-components/PlanStyle.module.css';
 import PlanStepsCard from '../components/plan-page-components/PlanStepsCard';
 import PlanQuestionCard from '../components/plan-page-components/PlanQuestionCard';
@@ -39,7 +40,7 @@ function Plan() {
           />
         </div>
 
-        <div>
+        <div className={style.planQuestionContainer}>
           {/* 01 Preferences
           02 Bean type
           03 Quantity
@@ -117,20 +118,30 @@ function Plan() {
               answer={answer5}
             />
 
-            <div>
-              Order Summary “I drink coffee _____, with a _____ type of bean.
-              _____ ground ala _____, sent to me _____.” Create my plan!
+            <div className={style.orderSummary}>
+              <p>Order Summary</p>
+              <h4>
+                “I drink my coffee as <span>{answer1 ? answer1 : '_____'}</span>
+                , with a <span>{answer2 ? answer2 : '_____'}</span> type of
+                bean. <span>{answer3 ? answer3 : '_____'}</span> ground ala{' '}
+                <span>{answer4 ? answer4 : '_____'}</span>, sent to me{' '}
+                <span>{answer5 ? answer5 : '_____'}</span>.”
+              </h4>
+            </div>
+
+            <div className={style.buttonContainer}>
+              <Button title='Create my plan!' />
             </div>
 
             {/* <!-- Modal --> */}
-            <div>
-              Order Summary “I drink coffee _____, with a _____ type of bean.
-              _____ ground ala _____, sent to me _____.” Is this correct? You
-              can proceed to checkout or go back to plan selection if something
-              is off. Subscription discount codes can also be redeemed at the
-              checkout. $_____/month
+            {/* <div>
+              Order Summary “I drink my coffee as _____, with a _____ type of
+              bean. _____ ground ala _____, sent to me _____.” Is this correct?
+              You can proceed to checkout or go back to plan selection if
+              something is off. Subscription discount codes can also be redeemed
+              at the checkout. $_____/month
               <button>Checkout</button>
-            </div>
+            </div> */}
             {/* <!-- End modal --> */}
           </form>
         </div>

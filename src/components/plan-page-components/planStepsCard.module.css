@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: #ffffff;
-  height: 25.2rem;
+  min-height: 25.2rem;
 }
 
 .number {
