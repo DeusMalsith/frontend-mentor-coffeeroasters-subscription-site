@@ -13,10 +13,7 @@ import Danche from '../images/home/desktop/image-danche.png';
 import IconCoffeeBean from '../images/home/desktop/icon-coffee-bean.svg';
 import IconGift from '../images/home/desktop/icon-gift.svg';
 import IconTruck from '../images/home/desktop/icon-truck.svg';
-import * as LayoutStyle from '../components/Layout.module.css';
-import * as IndexStyle from '../components/index-page-components/IndexStyle.module.css';
-let style = {};
-Object.assign(style, LayoutStyle, IndexStyle);
+import * as style from '../components/index-page-components/IndexStyle.module.css';
 
 function Index() {
   return (
@@ -28,7 +25,7 @@ function Index() {
       coffees from our best roasters delivered directly to your door, at your schedule.'
       >
         <Link to='/plan'>
-          <Button title='Create your plan' />
+          <Button>Create your plan</Button>
         </Link>
       </Hero>
       <div className={style.ourCollectionContainer}>
@@ -117,7 +114,7 @@ function Index() {
           tasting experience.'
         />
         <Link to='/plan'>
-          <Button title='Create your plan' />
+          <Button>Create your plan</Button>
         </Link>
       </div>
     </Layout>

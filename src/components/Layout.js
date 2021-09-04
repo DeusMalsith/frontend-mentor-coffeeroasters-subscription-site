@@ -11,7 +11,7 @@ function Layout({ children }) {
     <div>
       <title>Frontend Mentor | Coffeeroasters subscription site</title>
       <Helmet>
-        <body className={`${openMenu ? style.noScroll : ''}`} />
+        <body className={openMenu ? style.noScroll : null} />
       </Helmet>
       <Navbar setOpenMenu={setOpenMenu} openMenu={openMenu} />
       <main>{children}</main>

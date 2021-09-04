@@ -7,6 +7,8 @@
   min-height: 102.8rem;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+  margin-left: -2.4rem;
+  margin-right: -2.4rem;
   background-color: var(--color-darker-grey-blue);
   background-image: url(../../images/plan/mobile/bg-steps.png);
   background-size: cover;
@@ -53,4 +55,96 @@
 .buttonContainer {
   text-align: center;
   margin-top: 5.6rem;
+}
+
+.modalBackground {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  margin-right: -2.4rem;
+  margin-left: -2.4rem;
+  top: 0;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  height: 59.7rem;
+  z-index: 100;
+  margin-top: 3.5rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.hideModal {
+  display: none;
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-dark-grey-blue);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.modalHeader h3 {
+  color: white;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  padding-left: 2.4rem;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+}
+
+.modalHeader button {
+  border: none;
+  background-color: white;
+  margin-right: 2rem;
+  border-radius: 3px;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+}
+
+.modalHeader img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.modalSummarySubContainer {
+  margin: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.modalSummarySubContainer p {
+  color: var(--color-dark-grey-blue);
+  opacity: 0.8;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.modalSummary {
+  color: var(--color-grey);
+}
+
+.modalSummary h4 {
+  line-height: 4rem;
+}
+
+.modalSummary span {
+  color: var(--color-dark-cyan);
+}
+
+.modalCheckout {
+  text-align: center;
+}
+
+.modalCheckout button {
+  margin-top: 2.4rem;
 }
