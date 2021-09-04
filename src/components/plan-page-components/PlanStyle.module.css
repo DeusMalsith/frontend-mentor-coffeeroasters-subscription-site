@@ -70,7 +70,6 @@
 .modal {
   display: flex;
   flex-direction: column;
-  height: 59.7rem;
   z-index: 100;
   margin-top: 3.5rem;
   margin-left: 2.4rem;
