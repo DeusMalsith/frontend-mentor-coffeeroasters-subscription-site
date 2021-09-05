@@ -16,6 +16,57 @@ function Plan() {
   const [showModal, setShowModal] = useState(false);
   const [deactivated, setDeactivated] = useState(false);
 
+  const shipping1 =
+    answer3 === '250g'
+      ? '$7.20 per shipment. Includes free first-class shipping.'
+      : answer3 === '500g'
+      ? '$13.00 per shipment. Includes free first-class shipping.'
+      : answer3 === '1000g'
+      ? '$22.00 per shipment. Includes free first-class shipping.'
+      : 'Select how much you would like first to determine shipping costs.';
+  const shipping2 =
+    answer3 === '250g'
+      ? '$9.60 per shipment. Includes free first-class shipping.'
+      : answer3 === '500g'
+      ? '$17.50 per shipment. Includes free first-class shipping.'
+      : answer3 === '1000g'
+      ? '$32.00 per shipment. Includes free first-class shipping.'
+      : 'Select how much you would like first to determine shipping costs.';
+  const shipping3 =
+    answer3 === '250g'
+      ? '$12.00 per shipment. Includes free first-class shipping.'
+      : answer3 === '500g'
+      ? '$22.00 per shipment. Includes free first-class shipping.'
+      : answer3 === '1000g'
+      ? '$42.00 per shipment. Includes free first-class shipping.'
+      : 'Select how much you would like first to determine shipping costs.';
+  const usingOrAs = answer1 === 'Capsule' ? 'using' : 'as';
+  const capsuleOrCapsules =
+    answer1 === 'Capsule' ? 'Capsules' : answer1 ? answer1 : '_____';
+  const coffeeType = answer2 ? answer2 : '_____';
+  const coffeeAmount = answer3 ? answer3 : '_____';
+  const ground = answer4 ? answer4 : '_____';
+  const checkoutTotal =
+    answer5 === 'Every week' && answer3 === '250g'
+      ? 'Checkout - $28.80/mo'
+      : answer5 === 'Every 2 weeks' && answer3 === '250g'
+      ? 'Checkout - $19.20/mo'
+      : answer5 === 'Every month' && answer3 === '250g'
+      ? 'Checkout - $12.00/mo'
+      : answer5 === 'Every week' && answer3 === '500g'
+      ? 'Checkout - $52.00/mo'
+      : answer5 === 'Every 2 weeks' && answer3 === '500g'
+      ? 'Checkout - $35.00/mo'
+      : answer5 === 'Every month' && answer3 === '500g'
+      ? 'Checkout - $22.00/mo'
+      : answer5 === 'Every week' && answer3 === '1000g'
+      ? 'Checkout - $88.00/mo'
+      : answer5 === 'Every 2 weeks' && answer3 === '1000g'
+      ? 'Checkout - $64.00/mo'
+      : answer5 === 'Every month' && answer3 === '1000g'
+      ? 'Checkout - $42.00/mo'
+      : 'Checkout';
+
   const handleShowModal = () => {
     setShowModal(!showModal);
     handleBodyScroll();
@@ -36,13 +87,6 @@ function Plan() {
     setDeactivated(answer1 === 'Capsule' ? true : false);
     setAnswer4(null);
   }, [answer1, deactivated]);
-
-  const usingOrAs = answer1 === 'Capsule' ? 'using' : 'as';
-  const capsuleOrCapsules =
-    answer1 === 'Capsule' ? 'Capsules' : answer1 ? answer1 : '_____';
-  const coffeeType = answer2 ? answer2 : '_____';
-  const coffeeAmount = answer3 ? answer3 : '_____';
-  const ground = answer4 ? answer4 : '_____';
 
   return (
     <Layout>
@@ -140,11 +184,11 @@ function Plan() {
             formName='question5'
             question='How often should we deliver?'
             answer1='Every week'
-            paragraph1='$14.00 per shipment. Includes free first-class shipping.'
+            paragraph1={shipping1}
             answer2='Every 2 weeks'
-            paragraph2='$17.25 per shipment. Includes free priority shipping.'
+            paragraph2={shipping2}
             answer3='Every month'
-            paragraph3='$22.50 per shipment. Includes free priority shipping.'
+            paragraph3={shipping3}
             setAnswer={setAnswer5}
             answer={answer5}
           />
@@ -201,7 +245,7 @@ function Plan() {
                   codes can also be redeemed at the checkout.
                 </p>
                 <div className={style.modalCheckout}>
-                  <Button type='submit'>Checkout</Button>
+                  <Button type='submit'>{checkoutTotal}</Button>
                 </div>
               </div>
             </div>
