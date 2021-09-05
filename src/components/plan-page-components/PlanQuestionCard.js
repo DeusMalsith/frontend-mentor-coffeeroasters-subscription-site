@@ -12,10 +12,26 @@ function PlanQuestionCard({
   paragraph3,
   setAnswer,
   answer,
+  deactivated,
+  first,
 }) {
   return (
-    <details className={style.container}>
-      <summary className={style.question}>
+    <details
+      open={deactivated === true ? false : null || first ? true : null}
+      className={
+        deactivated === true
+          ? `${style.container} ${style.deactivated}`
+          : style.container
+      }
+    >
+      <summary
+        onClick={(e) => {
+          if (deactivated === true) {
+            e.preventDefault();
+          }
+        }}
+        className={style.question}
+      >
         <h4>{question}</h4>
       </summary>
 

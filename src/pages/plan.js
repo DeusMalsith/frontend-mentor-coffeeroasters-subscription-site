@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/Hero.js';
 import Button from '../components/Button.js';
@@ -14,6 +14,7 @@ function Plan() {
   const [answer4, setAnswer4] = useState(null);
   const [answer5, setAnswer5] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [deactivated, setDeactivated] = useState(false);
 
   const handleShowModal = () => {
     setShowModal(!showModal);
@@ -24,6 +25,24 @@ function Plan() {
       ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = 'auto');
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleAlert = () => {};
+
+  useEffect(() => {
+    setDeactivated(answer1 === 'Capsule' ? true : false);
+    setAnswer4(null);
+  }, [answer1, deactivated]);
+
+  const usingOrAs = answer1 === 'Capsule' ? 'using' : 'as';
+  const capsuleOrCapsules =
+    answer1 === 'Capsule' ? 'Capsules' : answer1 ? answer1 : '_____';
+  const coffeeType = answer2 ? answer2 : '_____';
+  const coffeeAmount = answer3 ? answer3 : '_____';
+  const ground = answer4 ? answer4 : '_____';
 
   return (
     <Layout>
@@ -59,10 +78,9 @@ function Plan() {
           05 Deliveries */}
 
         <form
-          action=''
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
+          // action=''
+          // method='POST'
+          onSubmit={handleSubmit}
         >
           <PlanQuestionCard
             formName='question1'
@@ -75,6 +93,7 @@ function Plan() {
             paragraph3='Dense and finely ground beans for an intense, flavorful experience'
             setAnswer={setAnswer1}
             answer={answer1}
+            first={true}
           />
 
           <PlanQuestionCard
@@ -114,6 +133,7 @@ function Plan() {
             paragraph3='Course ground beans specially suited for french press coffee'
             setAnswer={setAnswer4}
             answer={answer4}
+            deactivated={deactivated}
           />
 
           <PlanQuestionCard
@@ -132,16 +152,27 @@ function Plan() {
           <div className={style.orderSummary}>
             <p>Order Summary</p>
             <h4>
-              “I drink my coffee as <span>{answer1 ? answer1 : '_____'}</span>,
-              with a <span>{answer2 ? answer2 : '_____'}</span> type of bean.{' '}
-              <span>{answer3 ? answer3 : '_____'}</span> ground ala{' '}
-              <span>{answer4 ? answer4 : '_____'}</span>, sent to me{' '}
+              “I drink my coffee {usingOrAs} <span>{capsuleOrCapsules}</span>,
+              with a <span>{coffeeType}</span> type of bean.{' '}
+              <span>{coffeeAmount}</span>{' '}
+              {answer1 === 'Capsule' ? null : `ground ala `}
+              <span>{answer1 === 'Capsule' ? null : ground}</span>
+              {answer1 === 'Capsule' ? null : ','} sent to me{' '}
               <span>{answer5 ? answer5 : '_____'}</span>.”
             </h4>
           </div>
 
           <div className={style.buttonContainer}>
-            <Button onClick={handleShowModal}>Create my plan!</Button>
+            <Button
+              type='button'
+              onClick={
+                answer1 && answer2 && answer3 && answer5
+                  ? handleShowModal
+                  : null
+              }
+            >
+              Create my plan!
+            </Button>
           </div>
 
           {/* <!-- Modal --> */}
@@ -149,17 +180,19 @@ function Plan() {
             <div className={showModal ? style.modal : style.hideModal}>
               <div className={style.modalHeader}>
                 <h3>Order Summary</h3>
-                <button onClick={handleShowModal}>
+                <button type='button' onClick={handleShowModal}>
                   <img src={IconClose} alt='close order summary modal' />
                 </button>
               </div>
               <div className={style.modalSummarySubContainer}>
                 <h4 className={style.modalSummary}>
-                  “I drink my coffee as{' '}
-                  <span>{answer1 ? answer1 : '_____'}</span>, with a{' '}
-                  <span>{answer2 ? answer2 : '_____'}</span> type of bean.{' '}
-                  <span>{answer3 ? answer3 : '_____'}</span> ground ala{' '}
-                  <span>{answer4 ? answer4 : '_____'}</span>, sent to me{' '}
+                  “I drink my coffee {usingOrAs}{' '}
+                  <span>{capsuleOrCapsules}</span>, with a{' '}
+                  <span>{coffeeType}</span> type of bean.{' '}
+                  <span>{coffeeAmount}</span>{' '}
+                  {answer1 === 'Capsule' ? null : 'ground ala '}
+                  <span>{answer1 === 'Capsule' ? null : ground}</span>
+                  {answer1 === 'Capsule' ? null : ','} sent to me{' '}
                   <span>{answer5 ? answer5 : '_____'}</span>.”
                 </h4>
                 <p>
@@ -168,7 +201,7 @@ function Plan() {
                   codes can also be redeemed at the checkout.
                 </p>
                 <div className={style.modalCheckout}>
-                  <Button>Checkout</Button>
+                  <Button type='submit'>Checkout</Button>
                 </div>
               </div>
             </div>
