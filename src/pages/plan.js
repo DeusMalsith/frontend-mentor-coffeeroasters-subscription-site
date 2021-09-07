@@ -16,29 +16,65 @@ function Plan() {
   const [showModal, setShowModal] = useState(false);
   const [deactivated, setDeactivated] = useState(false);
 
-  const shipping1 =
+  const shipping = {
+    twoFifty: {
+      weekly: 7.2,
+      biWeekly: 13.0,
+      monthly: 22.0,
+    },
+    fiveHundred: {
+      weekly: 13.0,
+      biWeekly: 17.5,
+      monthly: 22.0,
+    },
+    oneThousand: {
+      weekly: 22.0,
+      biWeekly: 32.0,
+      monthly: 42.0,
+    },
+  };
+
+  const shippingWeekly =
     answer3 === '250g'
-      ? '$7.20 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.twoFifty.weekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '500g'
-      ? '$13.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.fiveHundred.weekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '1000g'
-      ? '$22.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.oneThousand.weekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : 'Select how much you would like first to determine shipping costs.';
-  const shipping2 =
+  const shippingBiWeekly =
     answer3 === '250g'
-      ? '$9.60 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.twoFifty.biWeekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '500g'
-      ? '$17.50 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.fiveHundred.biWeekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '1000g'
-      ? '$32.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.oneThousand.biWeekly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : 'Select how much you would like first to determine shipping costs.';
-  const shipping3 =
+  const shippingMonthly =
     answer3 === '250g'
-      ? '$12.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.twoFifty.monthly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '500g'
-      ? '$22.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.fiveHundred.monthly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : answer3 === '1000g'
-      ? '$42.00 per shipment. Includes free first-class shipping.'
+      ? `$${shipping.oneThousand.monthly.toFixed(
+          2
+        )} per shipment. Includes free first-class shipping.`
       : 'Select how much you would like first to determine shipping costs.';
   const usingOrAs = answer1 === 'Capsule' ? 'using' : 'as';
   const capsuleOrCapsules =
@@ -46,25 +82,28 @@ function Plan() {
   const coffeeType = answer2 ? answer2 : '_____';
   const coffeeAmount = answer3 ? answer3 : '_____';
   const ground = answer4 ? answer4 : '_____';
+  const answerVariation1 = answer1 && answer2 && answer3 && answer4 && answer5;
+  const answerVariation2 =
+    answer1 === 'Capsule' && answer2 && answer3 && answer4 === null && answer5;
   const checkoutTotal =
     answer5 === 'Every week' && answer3 === '250g'
-      ? 'Checkout - $28.80/mo'
+      ? `Checkout - $${(shipping.twoFifty.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '250g'
-      ? 'Checkout - $19.20/mo'
+      ? `Checkout - $${(shipping.twoFifty.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '250g'
-      ? 'Checkout - $12.00/mo'
+      ? `Checkout - $${(shipping.twoFifty.monthly * 1).toFixed(2)}/mo`
       : answer5 === 'Every week' && answer3 === '500g'
-      ? 'Checkout - $52.00/mo'
+      ? `Checkout - $${(shipping.fiveHundred.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '500g'
-      ? 'Checkout - $35.00/mo'
+      ? `Checkout - $${(shipping.fiveHundred.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '500g'
-      ? 'Checkout - $22.00/mo'
+      ? `Checkout - $${(shipping.fiveHundred.monthly * 1).toFixed(2)}/mo`
       : answer5 === 'Every week' && answer3 === '1000g'
-      ? 'Checkout - $88.00/mo'
+      ? `Checkout - $${(shipping.oneThousand.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '1000g'
-      ? 'Checkout - $64.00/mo'
+      ? `Checkout - $${(shipping.oneThousand.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '1000g'
-      ? 'Checkout - $42.00/mo'
+      ? `Checkout - $${(shipping.oneThousand.monthly * 1).toFixed(2)}/mo`
       : 'Checkout';
 
   const handleShowModal = () => {
@@ -74,14 +113,12 @@ function Plan() {
   const handleBodyScroll = () => {
     !showModal
       ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'auto');
+      : (document.body.style.overflow = null);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
-  const handleAlert = () => {};
 
   useEffect(() => {
     setDeactivated(answer1 === 'Capsule' ? true : false);
@@ -184,11 +221,11 @@ function Plan() {
             formName='question5'
             question='How often should we deliver?'
             answer1='Every week'
-            paragraph1={shipping1}
+            paragraph1={shippingWeekly}
             answer2='Every 2 weeks'
-            paragraph2={shipping2}
+            paragraph2={shippingBiWeekly}
             answer3='Every month'
-            paragraph3={shipping3}
+            paragraph3={shippingMonthly}
             setAnswer={setAnswer5}
             answer={answer5}
           />
@@ -209,11 +246,10 @@ function Plan() {
           <div className={style.buttonContainer}>
             <Button
               type='button'
-              onClick={
-                answer1 && answer2 && answer3 && answer5
-                  ? handleShowModal
-                  : null
+              disabled={
+                answerVariation1 || answerVariation2 ? null : 'disabled'
               }
+              onClick={handleShowModal}
             >
               Create my plan!
             </Button>
