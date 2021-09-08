@@ -6,11 +6,19 @@
   margin-bottom: 19.8rem;
 }
 
-.ourCommitmentImage {
+.ourCommitmentImageMobile {
   max-height: 40rem;
   max-width: 100%;
   margin-bottom: 4.8rem;
   border-radius: 8px;
+}
+
+.ourCommitmentImageTablet {
+  display: none;
+}
+
+.ourCommitmentImageDesktop {
+  display: none;
 }
 
 .ourCommitmentTitle {
@@ -34,10 +42,16 @@
   align-items: center;
   background-color: var(--color-darker-grey-blue);
   background-image: url(../../images/about/mobile/bg-quality.png);
+  background-size: cover;
   border-radius: 10px;
   height: 50.9rem;
   margin-bottom: 12rem;
   color: var(--color-light-cream-bg);
+}
+
+.pictureContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .qualityImage {
@@ -70,4 +84,67 @@
   color: var(--color-grey);
   text-align: center;
   margin-bottom: 7.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .ourCommitmentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30.4rem;
+  }
+
+  .ourCommitmentSubContainer {
+    height: 45.3rem;
+  }
+
+  .ourCommitmentTitle {
+    text-align: start;
+  }
+
+  .ourCommitmentParapgraph {
+    text-align: start;
+    max-width: 40ch;
+  }
+
+  .qualityContainer {
+    align-items: center;
+    background-color: var(--color-darker-grey-blue);
+    background-image: url(../../images/about/tablet/bg-quality.png);
+    background-size: cover;
+    border-radius: 10px;
+    height: 48.8rem;
+    margin-bottom: 12rem;
+    color: var(--color-light-cream-bg);
+  }
+
+  .qualityImage {
+    position: absolute;
+    top: -16rem;
+    max-height: 32rem;
+    max-width: 100%;
+    margin-bottom: 6.4rem;
+    border-radius: 8px;
+  }
+
+  .qualityTitle {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    margin-top: 22.4rem;
+    max-width: 18ch;
+  }
+
+  .qualityParagraph {
+    max-width: 63.2ch;
+  }
+
+  .ourHeadquartersTitle {
+    text-align: start;
+    font-size: 2.4rem;
+  }
+
+  .ourHeadquartersContainer {
+    display: flex;
+    flex-direction: row;
+    width: 68.8rem;
+  }
 }

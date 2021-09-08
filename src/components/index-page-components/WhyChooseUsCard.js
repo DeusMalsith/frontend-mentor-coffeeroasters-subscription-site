@@ -6,7 +6,7 @@ function WhyChooseUsCard({ image, imageAlt, title, paragraph }) {
     <div className={style.card}>
       <img src={image} alt={imageAlt} className={style.image} />
       <div className={style.subContainer}>
-        <h4 className={style.title}>{title}</h4>
+        <h4>{title}</h4>
         <p className={style.paragraph}>{paragraph}</p>
       </div>
     </div>

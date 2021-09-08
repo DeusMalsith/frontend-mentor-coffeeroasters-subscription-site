@@ -18,6 +18,7 @@
     rgba(131, 136, 143, 0.1) 100%
   );
   background-size: 100%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -121,6 +122,7 @@
       rgba(131, 136, 143, 0.1) 100%
     );
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;

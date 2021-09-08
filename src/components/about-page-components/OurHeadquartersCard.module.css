@@ -29,3 +29,34 @@
 .info {
   white-space: pre-wrap;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 26.2rem;
+    justify-content: space-between;
+    margin-bottom: 0;
+    width: 22.3rem;
+  }
+
+  .container:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image {
+  }
+
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 2.2rem;
+    color: var(--color-dark-grey-blue);
+  }
+}
