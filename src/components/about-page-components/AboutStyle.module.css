@@ -6,19 +6,12 @@
   margin-bottom: 19.8rem;
 }
 
-.ourCommitmentImageMobile {
+.ourCommitmentImage {
+  display: flex;
   max-height: 40rem;
   max-width: 100%;
   margin-bottom: 4.8rem;
   border-radius: 8px;
-}
-
-.ourCommitmentImageTablet {
-  display: none;
-}
-
-.ourCommitmentImageDesktop {
-  display: none;
 }
 
 .ourCommitmentTitle {
@@ -90,11 +83,21 @@
   .ourCommitmentContainer {
     flex-direction: row;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
     margin-bottom: 30.4rem;
   }
 
   .ourCommitmentSubContainer {
     height: 45.3rem;
+  }
+
+  .ourCommitmentImage {
+    max-height: 47rem;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
   }
 
   .ourCommitmentTitle {
@@ -146,5 +149,6 @@
     display: flex;
     flex-direction: row;
     width: 68.8rem;
+    justify-content: space-between;
   }
 }

@@ -24,21 +24,21 @@ function About() {
         bean to brew - in every shipment.'
       />
       <div className={style.ourCommitmentContainer}>
-        <img
-          className={style.ourCommitmentImageMobile}
-          src={OurCommitmentImageMobile}
-          alt='Man making coffee'
-        />
-        <img
-          className={style.ourCommitmentImageTablet}
-          src={OurCommitmentImageTablet}
-          alt='Man making coffee'
-        />
-        <img
-          className={style.ourCommitmentImageDesktop}
-          src={OurCommitmentImageDesktop}
-          alt='Man making coffee'
-        />
+        <picture>
+          <source
+            media='(min-width: 768px)'
+            srcSet={OurCommitmentImageTablet}
+          />
+          <source
+            media='(min-width: 1440px)'
+            srcSet={OurCommitmentImageDesktop}
+          />
+          <img
+            className={style.ourCommitmentImage}
+            src={OurCommitmentImageMobile}
+            alt='Man making coffee'
+          />
+        </picture>
         <div className={style.ourCommitmentSubContainer}>
           <h3 className={style.ourCommitmentTitle}>Our commitment</h3>
           <p className={style.ourCommitmentParapgraph}>
