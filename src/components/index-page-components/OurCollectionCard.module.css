@@ -6,6 +6,7 @@
 
 .title {
   margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .paragraph {
@@ -17,4 +18,35 @@
   height: 151px;
   margin-top: 4.8rem;
   margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 57.3rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .subContainer {
+    margin-top: -6rem;
+  }
+
+  .title {
+    text-align: start;
+  }
+
+  .paragraph {
+    width: 31ch;
+    text-align: start;
+  }
+
+  .image {
+    height: 193px;
+    width: 255px;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
 }

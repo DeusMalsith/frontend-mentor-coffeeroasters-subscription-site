@@ -16,4 +16,33 @@
 .paragraph {
   max-width: 38ch;
   text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 22.3rem;
+  }
+
+  .number {
+    color: var(--color-pale-orange);
+  }
+
+  .title {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 11ch;
+  }
+
+  .paragraph {
+    max-width: 24ch;
+    text-align: start;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }

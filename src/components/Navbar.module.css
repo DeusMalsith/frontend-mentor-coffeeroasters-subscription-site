@@ -1,6 +1,6 @@
 .header {
-  margin-top: 9.6%;
-  margin-bottom: 10%;
+  margin-top: 3.2rem;
+  margin-bottom: 4rem;
 }
 
 .navbar {
@@ -39,7 +39,7 @@
 }
 
 /* ------- Mobile Menu ------- */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
   .navMenu {
     position: fixed;
     flex-direction: column;
@@ -83,22 +83,28 @@
 /* ------------------------- */
 
 @media screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 5.3rem;
+  }
+
+  .logo {
+    width: 23.6rem;
+  }
+
   .navbar {
     display: flex;
   }
 
   .navMenu {
-    transform: unset;
     list-style: none;
     display: flex;
     flex-direction: row;
-    position: unset;
-    width: unset;
+    width: 28.3rem;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navLink {
-    margin-left: 2rem;
-    margin-right: 2rem;
     text-decoration: none;
     color: var(--color-grey);
     text-transform: uppercase;

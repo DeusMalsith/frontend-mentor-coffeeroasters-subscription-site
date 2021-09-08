@@ -1,21 +1,52 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 38.2rem;
+  background-color: var(--color-dark-cyan);
+  border-radius: 8px;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.paragraph {
+  width: 23ch;
+  margin-top: 2.4rem;
+}
+
+.image {
+  margin-top: 7.2rem;
+  margin-bottom: 5.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    height: 38.2rem;
+    text-align: start;
+    justify-content: space-evenly;
+    height: 18rem;
     background-color: var(--color-dark-cyan);
     border-radius: 8px;
-    margin-left: 2.4rem;
-    margin-right: 2.4rem;
+    margin-left: 5.8rem;
+    margin-right: 5.8rem;
   }
-  
+
+  .subContainer {
+    flex-direction: column;
+    width: 34.4rem;
+  }
+
   .paragraph {
-    width: 23ch;
-    margin-top: 2.4rem;
+    width: 41ch;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
-  
-  .image {
-    margin-top: 7.2rem;
-    margin-bottom: 5.6rem;
+
+  image {
+    width: 56px;
+    height: 56px;
   }
+}
