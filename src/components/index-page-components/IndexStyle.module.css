@@ -148,7 +148,8 @@
     bottom: 0;
     height: 57.3rem;
     background-color: var(--color-darker-grey-blue);
-    background-image: url(../../images/about/mobile/bg-quality.png);
+    background-image: url('../../images/about/tablet/bg-quality.png');
+    background-size: cover;
     z-index: -1;
     border-radius: 10px;
   }
