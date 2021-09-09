@@ -181,3 +181,43 @@
     opacity: 0.8;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 60rem;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-darker-grey-blue);
+    background-image: url('../images/home/desktop/image-hero-coffeepress.jpg');
+    color: var(--color-light-cream-bg);
+  }
+
+  .homeTitle {
+    text-align: start;
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    max-width: 12ch;
+    padding-top: 10.4rem;
+    padding-bottom: 3.2rem;
+    margin-left: 8.5rem;
+  }
+
+  .homeParagraph {
+    text-align: start;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    max-width: 44ch;
+    padding-bottom: 5.6rem;
+    margin-left: 8.5rem;
+    opacity: 0.8;
+  }
+
+  .homeContainer button {
+    margin-left: 8.5rem;
+  }
+}

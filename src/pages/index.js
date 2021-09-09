@@ -30,33 +30,35 @@ function Index() {
       </Hero>
       <div className={style.ourCollectionContainer}>
         <h2 className={style.ourCollectionHeader}>our collection</h2>
-        <OurCollectionCard
-          imageSrc={GranEspresso}
-          imageAlt='Gran Espresso Coffee'
-          title='Gran Espresso'
-          paragraph='Light and flavorful blend with cocoa and black pepper for an intense
-          experience'
-        />
-        <OurCollectionCard
-          imageSrc={Planalto}
-          imageAlt='Planalto Coffee'
-          title='Planalto'
-          paragraph='Brazilian dark roast with rich and velvety body, and hints of fruits
-          and nuts'
-        />
-        <OurCollectionCard
-          imageSrc={Piccollo}
-          imageAlt='Piccollo Coffee'
-          title='Piccollo'
-          paragraph='Mild and smooth blend featuring notes of toasted almond and dried
-          cherry'
-        />
-        <OurCollectionCard
-          imageSrc={Danche}
-          imageAlt='Danche Coffee'
-          title='Danche'
-          paragraph='Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
-        />
+        <div className={style.ourCollectionSubContainer}>
+          <OurCollectionCard
+            imageSrc={GranEspresso}
+            imageAlt='Gran Espresso Coffee'
+            title='Gran Espresso'
+            paragraph='Light and flavorful blend with cocoa and black pepper for an intense
+            experience'
+          />
+          <OurCollectionCard
+            imageSrc={Planalto}
+            imageAlt='Planalto Coffee'
+            title='Planalto'
+            paragraph='Brazilian dark roast with rich and velvety body, and hints of fruits
+            and nuts'
+          />
+          <OurCollectionCard
+            imageSrc={Piccollo}
+            imageAlt='Piccollo Coffee'
+            title='Piccollo'
+            paragraph='Mild and smooth blend featuring notes of toasted almond and dried
+            cherry'
+          />
+          <OurCollectionCard
+            imageSrc={Danche}
+            imageAlt='Danche Coffee'
+            title='Danche'
+            paragraph='Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
+          />
+        </div>
       </div>
       <div className={style.whyChooseUsContainer}>
         <div className={style.whyChooseUsProposal}>
@@ -68,27 +70,29 @@ function Index() {
             level.
           </p>
         </div>
-        <WhyChooseUsCard
-          image={IconCoffeeBean}
-          imageAlt='Coffee Bean Icon'
-          title='Best quality'
-          paragraph='Discover an endless variety of the world’s best artisan coffee from
-            each of our roasters.'
-        />
-        <WhyChooseUsCard
-          image={IconGift}
-          imageAlt='Gift Icon'
-          title='Exclusive benefits'
-          paragraph='Special offers and swag when you subscribe, including 30% off your
-            first shipment.'
-        />
-        <WhyChooseUsCard
-          image={IconTruck}
-          imageAlt='Truck Icon'
-          title='Free Shipping'
-          paragraph='We cover the cost and coffee is delivered fast. Peak freshness:
-            guaranteed.'
-        />
+        {/* <div> */}
+          <WhyChooseUsCard
+            image={IconCoffeeBean}
+            imageAlt='Coffee Bean Icon'
+            title='Best quality'
+            paragraph='Discover an endless variety of the world’s best artisan coffee from
+              each of our roasters.'
+          />
+          <WhyChooseUsCard
+            image={IconGift}
+            imageAlt='Gift Icon'
+            title='Exclusive benefits'
+            paragraph='Special offers and swag when you subscribe, including 30% off your
+              first shipment.'
+          />
+          <WhyChooseUsCard
+            image={IconTruck}
+            imageAlt='Truck Icon'
+            title='Free Shipping'
+            paragraph='We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.'
+          />
+        {/* </div> */}
       </div>
       <div className={style.howItWorksContainer}>
         <h4>How it works</h4>
