@@ -13,6 +13,7 @@
 
 .logo {
   width: 100%;
+  height: 2.4rem;
   margin-right: auto;
   fill: white;
   list-style: none;
@@ -68,6 +69,22 @@
 @media screen and (min-width: 768px) {
   .container {
     margin-top: 14.4rem;
+    height: 27rem;
+    justify-content: center;
+  }
+
+  .subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 16.2rem;
+    margin: unset;
+  }
+
+  .logo {
+    text-align: center;
+    height: 2.6rem;
   }
 
   .link a {
@@ -84,5 +101,31 @@
   .link a:hover {
     cursor: pointer;
     color: var(--color-dark-grey-blue);
+  }
+
+  .navLinks {
+    flex-direction: row;
+    height: unset;
+    margin: unset;
+    margin-top: 3.2rem;
+  }
+
+  .navLinks li a {
+    margin: unset;
+  }
+
+  .navLinks li:nth-of-type(2) {
+    margin-left: 3.2rem;
+    margin-right: 3.3rem;
+  }
+
+  .socialMedia {
+    margin-top: 6.5rem;
+    display: flex;
+  }
+
+  .socialMedia li:nth-of-type(2) {
+    margin-right: 2.4rem;
+    margin-left: 2.4rem;
   }
 }
