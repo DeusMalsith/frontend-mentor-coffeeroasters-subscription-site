@@ -4,19 +4,31 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 12rem;
-  min-height: 102.8rem;
+  height: 102.8rem;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   margin-left: -2.4rem;
   margin-right: -2.4rem;
   background-color: var(--color-darker-grey-blue);
-  background-image: url(../../images/plan/mobile/bg-steps.png);
+  background-image: url('../../images/plan/mobile/bg-steps.png');
   background-size: cover;
   border-radius: 10px;
 }
 
+.divider,
+.dividerCircle {
+  display: none;
+}
+
 .planStepsContainer div:last-of-type > p {
   max-width: 37ch;
+}
+
+.planStepsSubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .planQuestionContainer {
@@ -31,13 +43,14 @@
   min-height: 33.8rem;
   margin-top: 12rem;
   background-color: var(--color-darker-grey-blue);
-  background-image: url(../../images/plan/mobile/bg-order-summary.png);
+  background-image: url('../../images/plan/mobile/bg-order-summary.png');
   background-size: cover;
   border-radius: 10px;
   padding: 3.2rem 2.4rem;
 }
 
 .orderSummary p {
+  text-transform: uppercase;
   margin-bottom: 0.8rem;
   color: white;
   opacity: 0.5;
@@ -62,9 +75,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   width: 100vw;
-  margin-right: -2.4rem;
-  margin-left: -2.4rem;
   top: 0;
+  left: 0;
 }
 
 .modal {
@@ -140,11 +152,164 @@
   color: var(--color-dark-cyan);
 }
 
-.modalCheckout {
+.modalCheckoutMobile {
   text-align: center;
 }
 
-.modalCheckout button {
+.modalCheckoutMobile button {
   margin-top: 2.4rem;
   width: 100%;
+}
+
+.modalCheckout {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .planStepsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+    margin-top: 12rem;
+    height: 64rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+    margin-left: -3.9rem;
+    margin-right: -3.9rem;
+    background-color: var(--color-darker-grey-blue);
+    background-image: url('../../images/plan/tablet/bg-steps.png');
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .planStepsContainer div:last-of-type > p {
+    max-width: 24ch;
+  }
+
+  .divider,
+  .dividerCircle {
+    display: block;
+  }
+
+  .divider {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 19.1rem);
+    height: 3.1rem;
+    z-index: 0;
+    margin-top: 9.7rem;
+    margin-bottom: 4.2rem;
+  }
+
+  .divider::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 15.5px;
+    right: 15.5px;
+    left: 15.5px;
+    bottom: 0;
+    border: 1px solid var(--color-pale-orange);
+    height: 1px;
+    background: var(--color-pale-orange);
+  }
+
+  .dividerCircle {
+    width: 3.1rem;
+    height: 3.1rem;
+    border: 2px var(--color-dark-cyan) solid;
+    border-radius: 100%;
+    display: inline-block;
+  }
+
+  .planStepsSubContainer {
+    display: flex;
+    width: 100%;
+    height: 39.4rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .orderSummary {
+    min-height: 20.8rem;
+    padding: 2.7rem 4.4rem;
+  }
+
+  .orderSummary p {
+    text-transform: uppercase;
+  }
+
+  .modalBackground {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+
+  .modal {
+    display: flex;
+    width: 54rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    z-index: 100;
+    margin-top: 15%;
+    background-color: white;
+    border-radius: 8px;
+  }
+
+  .modalHeader {
+    height: 13.6rem;
+    align-items: baseline;
+  }
+
+  .modalHeader h3 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    padding: 4.8rem 0 4rem 5.6rem;
+  }
+
+  .modalHeader button {
+    margin-right: 5rem;
+  }
+
+  .modalSummary {
+    line-height: 4rem;
+  }
+
+  .modalSummarySubContainer {
+    margin: 0 5.6rem 5.6rem 5.6rem;
+  }
+
+  .modalSummarySubContainer p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 0.7rem;
+  }
+
+  .modalCheckoutMobile {
+    display: none;
+  }
+
+  .modalCheckout {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 4.7rem;
+  }
+
+  .checkoutTotalText {
+    display: block;
+    font-family: var(--ff-fraunces);
+    color: var(--color-dark-grey-blue);
+    font-size: 3.2rem !important;
+    line-height: 3.6rem !important;
+  }
+
+  .modalCheckout button {
+    width: 21.7rem;
+  }
 }

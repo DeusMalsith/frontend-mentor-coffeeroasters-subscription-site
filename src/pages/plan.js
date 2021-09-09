@@ -52,29 +52,29 @@ function Plan() {
     answer3 === '250g'
       ? `$${shipping.twoFifty.biWeekly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : answer3 === '500g'
       ? `$${shipping.fiveHundred.biWeekly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : answer3 === '1000g'
       ? `$${shipping.oneThousand.biWeekly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : 'Select how much you would like first to determine shipping costs.';
   const shippingMonthly =
     answer3 === '250g'
       ? `$${shipping.twoFifty.monthly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : answer3 === '500g'
       ? `$${shipping.fiveHundred.monthly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : answer3 === '1000g'
       ? `$${shipping.oneThousand.monthly.toFixed(
           2
-        )} per shipment. Includes free first-class shipping.`
+        )} per shipment. Includes free priority shipping.`
       : 'Select how much you would like first to determine shipping costs.';
   const usingOrAs = answer1 === 'Capsule' ? 'using' : 'as';
   const capsuleOrCapsules =
@@ -87,23 +87,23 @@ function Plan() {
     answer1 === 'Capsule' && answer2 && answer3 && answer4 === null && answer5;
   const checkoutTotal =
     answer5 === 'Every week' && answer3 === '250g'
-      ? `Checkout - $${(shipping.twoFifty.weekly * 4).toFixed(2)}/mo`
+      ? `$${(shipping.twoFifty.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '250g'
-      ? `Checkout - $${(shipping.twoFifty.biWeekly * 2).toFixed(2)}/mo`
+      ? `$${(shipping.twoFifty.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '250g'
-      ? `Checkout - $${(shipping.twoFifty.monthly * 1).toFixed(2)}/mo`
+      ? `$${(shipping.twoFifty.monthly * 1).toFixed(2)}/mo`
       : answer5 === 'Every week' && answer3 === '500g'
-      ? `Checkout - $${(shipping.fiveHundred.weekly * 4).toFixed(2)}/mo`
+      ? `$${(shipping.fiveHundred.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '500g'
-      ? `Checkout - $${(shipping.fiveHundred.biWeekly * 2).toFixed(2)}/mo`
+      ? `$${(shipping.fiveHundred.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '500g'
-      ? `Checkout - $${(shipping.fiveHundred.monthly * 1).toFixed(2)}/mo`
+      ? `$${(shipping.fiveHundred.monthly * 1).toFixed(2)}/mo`
       : answer5 === 'Every week' && answer3 === '1000g'
-      ? `Checkout - $${(shipping.oneThousand.weekly * 4).toFixed(2)}/mo`
+      ? `$${(shipping.oneThousand.weekly * 4).toFixed(2)}/mo`
       : answer5 === 'Every 2 weeks' && answer3 === '1000g'
-      ? `Checkout - $${(shipping.oneThousand.biWeekly * 2).toFixed(2)}/mo`
+      ? `$${(shipping.oneThousand.biWeekly * 2).toFixed(2)}/mo`
       : answer5 === 'Every month' && answer3 === '1000g'
-      ? `Checkout - $${(shipping.oneThousand.monthly * 1).toFixed(2)}/mo`
+      ? `$${(shipping.oneThousand.monthly * 1).toFixed(2)}/mo`
       : 'Checkout';
 
   const handleShowModal = () => {
@@ -134,21 +134,30 @@ function Plan() {
       />
 
       <div className={style.planStepsContainer}>
-        <PlanStepsCard
-          number='01'
-          title='Pick your coffee'
-          paragraph='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'
-        />
-        <PlanStepsCard
-          number='02'
-          title='Choose the frequency'
-          paragraph='Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.'
-        />
-        <PlanStepsCard
-          number='03'
-          title='Receive and enjoy!'
-          paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.'
-        />
+        <div className={style.divider}>
+          <div className={style.dividerCircle}></div>
+          <div></div>
+          <div className={style.dividerCircle}></div>
+          <div></div>
+          <div className={style.dividerCircle}></div>
+        </div>
+        <div className={style.planStepsSubContainer}>
+          <PlanStepsCard
+            number='01'
+            title='Pick your coffee'
+            paragraph='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'
+          />
+          <PlanStepsCard
+            number='02'
+            title='Choose the frequency'
+            paragraph='Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.'
+          />
+          <PlanStepsCard
+            number='03'
+            title='Receive and enjoy!'
+            paragraph='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.'
+          />
+        </div>
       </div>
 
       <div className={style.planQuestionContainer}>
@@ -280,8 +289,12 @@ function Plan() {
                   plan selection if something is off. Subscription discount
                   codes can also be redeemed at the checkout.
                 </p>
+                <div className={style.modalCheckoutMobile}>
+                  <Button type='submit'>Checkout - {checkoutTotal}</Button>
+                </div>
                 <div className={style.modalCheckout}>
-                  <Button type='submit'>{checkoutTotal}</Button>
+                  <p className={style.checkoutTotalText}>{checkoutTotal}</p>
+                  <Button type='submit'>Checkout</Button>
                 </div>
               </div>
             </div>

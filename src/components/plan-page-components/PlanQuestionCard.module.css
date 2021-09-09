@@ -68,12 +68,14 @@
   width: 0;
 }
 
-.answerContainer:first-of-type {
-  margin-top: 3.2rem;
-}
+@media screen and (max-width: 767.9px) {
+  .answerContainer:first-of-type {
+    margin-top: 3.2rem;
+  }
 
-.answerContainer:last-of-type {
-  margin-bottom: 0;
+  .answerContainer:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .answer span {
@@ -86,4 +88,40 @@
 .answerParagraph {
   color: var(--color-dark-grey-blue);
   margin-top: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .answerCollection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .answerContainer {
+    height: 25rem;
+    width: 22.3rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+    margin-bottom: unset;
+    padding: 3.2rem 2.5rem;
+  }
+
+  .answer span {
+    white-space: nowrap;
+  }
+
+  .answerParagraph {
+    margin-top: 2.4rem;
+    width: 19ch;
+  }
+
+  .question h4 {
+    max-width: 22ch;
+  }
 }
