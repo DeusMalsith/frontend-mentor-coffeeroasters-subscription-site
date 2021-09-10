@@ -70,7 +70,7 @@ function Index() {
             level.
           </p>
         </div>
-        {/* <div> */}
+        <div className={style.whyChooseUsSubContainer}>
           <WhyChooseUsCard
             image={IconCoffeeBean}
             imageAlt='Coffee Bean Icon'
@@ -92,7 +92,7 @@ function Index() {
             paragraph='We cover the cost and coffee is delivered fast. Peak freshness:
               guaranteed.'
           />
-        {/* </div> */}
+        </div>
       </div>
       <div className={style.howItWorksContainer}>
         <h4>How it works</h4>

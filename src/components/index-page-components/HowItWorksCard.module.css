@@ -46,3 +46,21 @@
     line-height: 2.5rem;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 28.5rem;
+    height: 35.5rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    max-width: 31.5ch;
+  }
+}

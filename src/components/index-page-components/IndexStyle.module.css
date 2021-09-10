@@ -257,4 +257,55 @@
     padding: 3rem 0 2rem;
     margin-bottom: -3.7rem;
   }
+
+  .whyChooseUsContainer {
+    height: 72.8rem;
+    justify-content: unset;
+    align-items: center;
+    margin-bottom: 20rem;
+  }
+
+  .whyChooseUsContainer::before {
+    height: 57.7rem;
+    background-image: url('../../images/about/desktop/bg-quality.png');
+    background-size: cover;
+  }
+
+  .whyChooseUsProposal {
+    height: 16rem;
+    margin: 10rem 37rem 8.6rem;
+    justify-content: space-between;
+  }
+
+  .whyChooseUsProposal h4 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .whyChooseUsProposal p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    opacity: 0.8;
+  }
+
+  .whyChooseUsSubContainer {
+    display: flex;
+    flex-direction: row;
+    width: 111rem;
+    justify-content: space-between;
+  }
+
+  .howItWorksContainer {
+    width: 104.5rem;
+    height: 68.5rem;
+    margin-left: 8.5rem;
+  }
+
+  .howItWorksSubContainer div:nth-of-type(2) p {
+    max-width: 31ch;
+    white-space: pre-wrap;
+  }
+  .howItWorksSubContainer div:last-of-type p {
+    max-width: 30ch;
+  }
 }
