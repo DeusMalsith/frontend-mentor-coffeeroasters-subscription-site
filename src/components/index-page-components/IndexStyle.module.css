@@ -301,10 +301,15 @@
     margin-left: 8.5rem;
   }
 
+  .divider {
+    width: calc(100% - 25.4rem);
+  }
+
   .howItWorksSubContainer div:nth-of-type(2) p {
     max-width: 31ch;
     white-space: pre-wrap;
   }
+  
   .howItWorksSubContainer div:last-of-type p {
     max-width: 30ch;
   }

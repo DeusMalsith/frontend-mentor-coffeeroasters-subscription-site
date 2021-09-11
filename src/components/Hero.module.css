@@ -220,4 +220,26 @@
   .homeContainer button {
     margin-left: 8.5rem;
   }
+
+  .aboutContainer {
+    align-items: flex-start;
+    background-image: url('../images/about/desktop/image-hero-whitecup.jpg');
+    height: 45rem;
+  }
+
+  .aboutTitle {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-left: 8.5rem;
+    padding-top: 13.7rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .aboutParagraph {
+    text-align: start;
+    font-size: 1.6rem;
+    margin-left: 8.5rem;
+    line-height: 2.6rem;
+    max-width: 47ch;
+  }
 }

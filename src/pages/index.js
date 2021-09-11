@@ -98,9 +98,7 @@ function Index() {
         <h4>How it works</h4>
         <div className={style.divider}>
           <div className={style.dividerCircle}></div>
-          <div></div>
           <div className={style.dividerCircle}></div>
-          <div></div>
           <div className={style.dividerCircle}></div>
         </div>
         <div className={style.howItWorksSubContainer}>
