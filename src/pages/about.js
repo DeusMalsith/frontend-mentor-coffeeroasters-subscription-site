@@ -26,12 +26,12 @@ function About() {
       <div className={style.ourCommitmentContainer}>
         <picture>
           <source
-            media='(min-width: 768px)'
-            srcSet={OurCommitmentImageTablet}
-          />
-          <source
             media='(min-width: 1440px)'
             srcSet={OurCommitmentImageDesktop}
+          />
+          <source
+            media='(min-width: 768px)'
+            srcSet={OurCommitmentImageTablet}
           />
           <img
             className={style.ourCommitmentImage}
@@ -58,8 +58,8 @@ function About() {
       </div>
       <div className={style.qualityContainer}>
         <picture className={style.pictureContainer}>
-          <source media='(min-width: 768px)' srcSet={QualityImageTablet} />
           <source media='(min-width: 1440px)' srcSet={QualityImageDesktop} />
+          <source media='(min-width: 768px)' srcSet={QualityImageTablet} />
           <img
             className={style.qualityImage}
             src={QualityImageMobile}

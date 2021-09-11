@@ -15,6 +15,7 @@
 }
 
 .ourCommitmentTitle {
+  color: var(--color-dark-grey-blue);
   line-height: 4.8rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -25,6 +26,7 @@
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  opacity: 0.8;
   color: var(--color-dark-grey-blue);
 }
 
@@ -34,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-darker-grey-blue);
-  background-image: url(../../images/about/mobile/bg-quality.png);
+  background-image: url('../../images/about/mobile/bg-quality.png');
   background-size: cover;
   border-radius: 10px;
   height: 50.9rem;
@@ -112,7 +114,7 @@
   .qualityContainer {
     align-items: center;
     background-color: var(--color-darker-grey-blue);
-    background-image: url(../../images/about/tablet/bg-quality.png);
+    background-image: url('../../images/about/tablet/bg-quality.png');
     background-size: cover;
     border-radius: 10px;
     height: 48.8rem;
@@ -150,5 +152,72 @@
     flex-direction: row;
     width: 68.8rem;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ourCommitmentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 111rem;
+    margin-top: 16.8rem;
+    margin-bottom: 25.6rem;
+  }
+
+  .ourCommitmentSubContainer {
+    height: 34rem;
+  }
+
+  .ourCommitmentImage {
+    max-height: 52rem;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+
+  .ourCommitmentTitle {
+    text-align: start;
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .ourCommitmentParapgraph {
+    text-align: start;
+    max-width: 59.5ch;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .qualityContainer {
+    align-items: center;
+    background-color: var(--color-darker-grey-blue);
+    background-image: url('../../images/about/desktop/bg-quality.png');
+    background-size: cover;
+    border-radius: 10px;
+    height: 48.8rem;
+    margin-bottom: 12rem;
+    color: var(--color-light-cream-bg);
+  }
+
+  .qualityImage {
+    position: absolute;
+    top: -16rem;
+    max-height: 32rem;
+    max-width: 100%;
+    margin-bottom: 6.4rem;
+    border-radius: 8px;
+  }
+
+  .qualityTitle {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    margin-top: 22.4rem;
+    max-width: 18ch;
+  }
+
+  .qualityParagraph {
+    max-width: 63.2ch;
   }
 }
