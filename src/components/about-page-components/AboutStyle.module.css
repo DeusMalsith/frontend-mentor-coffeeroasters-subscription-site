@@ -227,5 +227,18 @@
     line-height: 2.6rem;
     margin-left: 8.5rem;
     max-width: 59.3ch;
+    opacity: 0.8;
+  }
+
+  .ourHeadquartersTitle {
+    text-align: start;
+    font-size: 2.4rem;
+  }
+
+  .ourHeadquartersContainer {
+    display: flex;
+    flex-direction: row;
+    width: 104.5rem;
+    justify-content: space-between;
   }
 }

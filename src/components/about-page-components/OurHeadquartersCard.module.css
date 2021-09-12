@@ -60,3 +60,20 @@
     color: var(--color-dark-grey-blue);
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 26.2rem;
+    justify-content: space-between;
+    margin-bottom: 0;
+    width: 28.5rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
