@@ -191,33 +191,41 @@
   }
 
   .qualityContainer {
-    align-items: center;
+    align-items: flex-start;
     background-color: var(--color-darker-grey-blue);
     background-image: url('../../images/about/desktop/bg-quality.png');
     background-size: cover;
     border-radius: 10px;
-    height: 48.8rem;
-    margin-bottom: 12rem;
+    height: 47.4rem;
+    margin-bottom: 16.8rem;
     color: var(--color-light-cream-bg);
   }
 
   .qualityImage {
     position: absolute;
-    top: -16rem;
-    max-height: 32rem;
+    top: -8.8rem;
+    right: 8.5rem;
+    max-height: 47.4rem;
     max-width: 100%;
     margin-bottom: 6.4rem;
     border-radius: 8px;
   }
 
   .qualityTitle {
-    font-size: 3.2rem;
+    text-align: start;
+    font-size: 4rem;
     line-height: 4.8rem;
-    margin-top: 22.4rem;
+    margin-top: 8.8rem;
+    margin-left: 8.5rem;
+    margin-bottom: 3.2rem;
     max-width: 18ch;
   }
 
   .qualityParagraph {
-    max-width: 63.2ch;
+    text-align: start;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-left: 8.5rem;
+    max-width: 59.3ch;
   }
 }
