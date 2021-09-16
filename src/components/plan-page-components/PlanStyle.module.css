@@ -35,6 +35,10 @@
   margin-top: 12rem;
 }
 
+.planQuestionList {
+  display: none;
+}
+
 .planQuestionContainer details:last-of-type {
   margin-bottom: 0;
 }
@@ -356,6 +360,59 @@
   }
 
   .planQuestionContainer {
+    display: flex;
+    justify-content: space-between;
     margin-top: 16.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 111rem;
+  }
+
+  .planQuestionList {
+    display: block;
+    position: sticky;
+    top: 3rem;
+    height: 100%;
+    width: 25.5rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    white-space: nowrap;
+  }
+
+  .planQuestionListItem {
+    font-family: var(--ff-fraunces);
+    color: var(--color-grey);
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+    list-style: none;
+  }
+
+  .planQuestionList span {
+    margin-right: 2.85rem;
+  }
+
+  .planQuestionList li:last-child {
+    border: none;
+  }
+
+  .deactivated {
+    color: rgba(131, 136, 143, 0.5) !important;
+  }
+
+  .answered {
+    color: var(--color-dark-grey-blue);
+  }
+
+  .answered span {
+    color: var(--color-dark-cyan);
+  }
+
+  .deactivated span {
+    color: rgba(131, 136, 143, 0.5);
+  }
+
+  .orderSummary {
+    width: 73rem;
   }
 }

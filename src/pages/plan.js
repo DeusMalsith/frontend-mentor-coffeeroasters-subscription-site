@@ -161,11 +161,53 @@ function Plan() {
       </div>
 
       <div className={style.planQuestionContainer}>
-        {/* 01 Preferences
-          02 Bean type
-          03 Quantity
-          04 Grind option
-          05 Deliveries */}
+        <ol className={style.planQuestionList}>
+          <li
+            className={
+              answer1
+                ? `${style.planQuestionListItem} ${style.answered}`
+                : style.planQuestionListItem
+            }
+          >
+            <span>01</span> Preferences
+          </li>
+          <li
+            className={
+              answer2
+                ? `${style.planQuestionListItem} ${style.answered}`
+                : style.planQuestionListItem
+            }
+          >
+            <span>02</span> Bean type
+          </li>
+          <li
+            className={
+              answer3
+                ? `${style.planQuestionListItem} ${style.answered}`
+                : style.planQuestionListItem
+            }
+          >
+            <span>03</span> Quantity
+          </li>
+          <li
+            className={`${
+              answer4
+                ? `${style.planQuestionListItem} ${style.answered}`
+                : style.planQuestionListItem
+            } ${deactivated ? style.deactivated : null}`}
+          >
+            <span>04</span> Grind option
+          </li>
+          <li
+            className={
+              answer5
+                ? `${style.planQuestionListItem} ${style.answered}`
+                : style.planQuestionListItem
+            }
+          >
+            <span>05</span> Deliveries
+          </li>
+        </ol>
 
         <form
           // action=''
