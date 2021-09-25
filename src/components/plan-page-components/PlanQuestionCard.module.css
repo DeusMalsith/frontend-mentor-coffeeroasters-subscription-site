@@ -125,3 +125,24 @@
     max-width: 22ch;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 73rem;
+    margin-bottom: 8.8rem;
+  }
+
+  .container[open] {
+    margin-bottom: 8.8rem;
+  }
+
+  .answerContainer {
+    margin-top: 5.6rem;
+    width: 22.8rem;
+  }
+
+  .question h4 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
