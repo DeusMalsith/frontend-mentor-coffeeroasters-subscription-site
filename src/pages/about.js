@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import OurHeadquartersCard from '../components/about-page-components/OurHeadquartersCard';
 import OurCommitmentImageMobile from '../images/about/mobile/image-commitment.jpg';
