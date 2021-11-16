@@ -26,6 +26,13 @@
   line-height: 7.2rem;
 }
 
+.whyChooseUsSubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 119.4rem;
+}
+
 @media screen and (max-width: 320px) {
   .ourCollectionHeader {
     font-size: 3rem;
@@ -80,7 +87,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
 }
 
 .howItWorksContainer > h4 {
@@ -152,6 +158,10 @@
     background-size: cover;
     z-index: -1;
     border-radius: 10px;
+  }
+
+  .whyChooseUsSubContainer {
+    height: 58.8rem;
   }
 
   .whyChooseUsProposal {
@@ -309,7 +319,7 @@
     max-width: 31ch;
     white-space: pre-wrap;
   }
-  
+
   .howItWorksSubContainer div:last-of-type p {
     max-width: 30ch;
   }
