@@ -4,7 +4,7 @@ import facebook from '../images/shared/desktop/icon-facebook.svg';
 import instagram from '../images/shared/desktop/icon-instagram.svg';
 import twitter from '../images/shared/desktop/icon-twitter.svg';
 import * as style from './Footer.module.css';
-import FooterLogo from './footerlogo';
+import FooterLogo from './FooterLogo';
 
 function Footer() {
   return (
