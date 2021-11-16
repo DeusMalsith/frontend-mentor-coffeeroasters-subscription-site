@@ -143,11 +143,24 @@
 
   .subContainer {
     flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
   }
 
   .logo {
-    margin: unset;
+    margin-left: 8.5rem;
+    margin-right: 10.2rem;
     width: unset;
+  }
+
+  .navLinks {
+    margin: unset;
+  }
+
+  .socialMedia {
+    margin: unset;
+    margin-left: auto;
+    padding-left: unset;
+    padding-right: 8.5rem;
   }
 }
