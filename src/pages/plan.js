@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Hero from '../components/Hero.js';
 import Button from '../components/Button.js';
 import IconClose from '../images/shared/mobile/icon-close.svg';
