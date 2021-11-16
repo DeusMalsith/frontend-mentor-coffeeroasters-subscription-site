@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Button from '../components/Button';
 import OurCollectionCard from '../components/index-page-components/OurCollectionCard';
