@@ -26,13 +26,13 @@ function Footer() {
         </ul>
         <ul className={style.socialMedia}>
           <li>
-            <img src={facebook} alt='facebook icon' />
+            <img className={style.socialMediaButton} src={facebook} alt='facebook icon' />
           </li>
           <li>
-            <img src={twitter} alt='twitter icon' />
+            <img className={style.socialMediaButton} src={twitter} alt='twitter icon' />
           </li>
           <li>
-            <img src={instagram} alt='instagram icon' />
+            <img className={style.socialMediaButton} src={instagram} alt='instagram icon' />
           </li>
         </ul>
       </ul>

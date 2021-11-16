@@ -53,7 +53,7 @@
 
 .link a:hover {
   cursor: pointer;
-  color: var(--color-dark-grey-blue);
+  color: var(--color-light-cream-bg);
 }
 
 .socialMedia {
@@ -64,6 +64,14 @@
   list-style: none;
   padding-left: 5.8rem;
   padding-right: 5.8rem;
+}
+
+.socialMediaButton {
+  cursor: pointer;
+}
+
+.socialMediaButton:hover {
+  color: red;
 }
 
 @media screen and (min-width: 768px) {
@@ -91,7 +99,6 @@
     margin-left: 2rem;
     margin-right: 2rem;
     text-decoration: none;
-    color: var(--color-grey);
   }
 
   .link a:visited {
@@ -100,7 +107,6 @@
 
   .link a:hover {
     cursor: pointer;
-    color: var(--color-dark-grey-blue);
   }
 
   .navLinks {
@@ -132,13 +138,8 @@
 
 @media screen and (min-width: 1440px) {
   .container {
-    margin-top: 20rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
     height: 12rem;
+    margin-top: 20rem;
   }
 
   .subContainer {

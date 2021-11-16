@@ -51,6 +51,15 @@
   height: 14rem;
   margin-bottom: 1.6rem;
   padding: 2.4rem 2.5rem;
+  cursor: pointer;
+}
+
+.answerContainer:hover {
+  background-color: var(--color-pale-orange);
+}
+
+.answerContainer:hover:first-of-type * {
+  color: var(--color-dark-grey-blue)
 }
 
 .active {
