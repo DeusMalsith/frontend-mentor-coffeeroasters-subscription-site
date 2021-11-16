@@ -53,6 +53,7 @@ function PlanQuestionCard({
               onClick={(e) => {
                 setAnswer(answer !== answer1 ? e.target.value : null);
               }}
+              onMouseOver
             />
             <p className={style.answerParagraph}>{paragraph1}</p>
           </div>
