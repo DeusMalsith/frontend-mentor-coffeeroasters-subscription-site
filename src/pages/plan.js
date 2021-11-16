@@ -282,8 +282,8 @@ function Plan() {
           />
 
           <div className={style.orderSummary}>
-            <p>Order Summary</p>
-            <h4>
+            <p className={style.orderSummaryTitle}>Order Summary</p>
+            <p className={style.orderSummaryAnswers}>
               “I drink my coffee {usingOrAs} <span>{capsuleOrCapsules}</span>,
               with a <span>{coffeeType}</span> type of bean.{' '}
               <span>{coffeeAmount}</span>{' '}
@@ -291,7 +291,7 @@ function Plan() {
               <span>{answer1 === 'Capsule' ? null : ground}</span>
               {answer1 === 'Capsule' ? null : ','} sent to me{' '}
               <span>{answer5 ? answer5 : '_____'}</span>.”
-            </h4>
+            </p>
           </div>
 
           <div className={style.buttonContainer}>

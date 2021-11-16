@@ -135,3 +135,19 @@
     margin-top: 20rem;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .container {
+    height: 12rem;
+  }
+
+  .subContainer {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .logo {
+    margin: unset;
+    width: unset;
+  }
+}
