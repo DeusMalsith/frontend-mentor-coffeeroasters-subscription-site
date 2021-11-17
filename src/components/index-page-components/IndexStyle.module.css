@@ -71,6 +71,10 @@
   margin: 6.4rem 2.4rem 2.8rem 2.4rem;
 }
 
+.whyChooseUsProposal h4 {
+  padding-bottom: 2.4rem;
+}
+
 .whyChooseUsProposal p {
   max-width: 33ch;
 }
@@ -175,6 +179,7 @@
   .whyChooseUsProposal h4 {
     font-size: 3.2rem;
     line-height: 4.8rem;
+    padding-bottom: 2.4rem;
   }
 
   .whyChooseUsProposal p {
@@ -290,6 +295,7 @@
   .whyChooseUsProposal h4 {
     font-size: 4rem;
     line-height: 4.8rem;
+    padding-bottom: 3.2rem;
   }
 
   .whyChooseUsProposal p {
